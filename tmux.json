@@ -1,0 +1,726 @@
+[
+  {
+    "desc": "Start a new session",
+    "cat": "Sessions",
+    "keywords": [
+      "create"
+    ],
+    "shell": [
+      "tmux",
+      "tmux new",
+      "tmux new-session"
+    ],
+    "tmuxcmd": [
+      "new"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Start a new session with the name <i>mysession</i>",
+    "cat": "Sessions",
+    "keywords": [
+      "create"
+    ],
+    "shell": [
+      "tmux new -s mysession"
+    ],
+    "tmuxcmd": [
+      "new -s mysession"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "kill/delete session <i>mysession</i>",
+    "cat": "Sessions",
+    "keywords": [
+      "terminate"
+    ],
+    "shell": [
+      "tmux kill-ses -t mysession",
+      "tmux kill-session -t mysession"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "kill/delete all sessions but the current",
+    "cat": "Sessions",
+    "keywords": [
+      "terminate"
+    ],
+    "shell": [
+      "tmux kill-session -a"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "kill/delete all sessions but <i>mysession</i>",
+    "cat": "Sessions",
+    "keywords": [
+      "terminate"
+    ],
+    "shell": [
+      "tmux kill-session -a -t mysession"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "Rename session",
+    "cat": "Sessions",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>$</kbd>"
+    ]
+  },
+  {
+    "desc": "Detach from session",
+    "cat": "Sessions",
+    "keywords": [
+      "exit session"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>d</kbd>"
+    ]
+  },
+  {
+    "desc": "Detach others on the session (Maximize window by detach other clients)",
+    "cat": "Sessions",
+    "keywords": [
+      "exit session",
+      "detach others",
+      "maximize"
+    ],
+    "shell": [],
+    "tmuxcmd": [
+      "attach -d"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Show all sessions",
+    "cat": "Sessions",
+    "shell": [
+      "tmux ls",
+      "tmux list-sessions"
+    ],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>s</kbd>"
+    ]
+  },
+  {
+    "desc": "Attach to last session",
+    "cat": "Sessions",
+    "shell": [
+      "tmux a",
+      "tmux at",
+      "tmux attach",
+      "tmux attach-session"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "Attach to a session with the name <i>mysession</i>",
+    "cat": "Sessions",
+    "shell": [
+      "tmux a -t mysession",
+      "tmux at -t mysession",
+      "tmux attach -t mysession",
+      "tmux attach-session -t mysession"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "Move to previous session",
+    "cat": "Sessions",
+    "keywords": [
+      "navigate",
+      "switch"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>(</kbd>"
+    ]
+  },
+  {
+    "desc": "Move to next session",
+    "cat": "Sessions",
+    "keywords": [
+      "navigate",
+      "switch"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>)</kbd>"
+    ]
+  },
+  {
+    "desc": "start a new session with the name <i>mysession</i> and window <i>mywindow</i>",
+    "cat": "Windows",
+    "keywords": [
+      "create"
+    ],
+    "shell": [
+      "tmux new -s mysession -n mywindow"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "Create window",
+    "cat": "Windows",
+    "keywords": [
+      "create new window"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>c</kbd>"
+    ]
+  },
+  {
+    "desc": "Rename current window",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>,</kbd>"
+    ]
+  },
+  {
+    "desc": "Close current window",
+    "cat": "Windows",
+    "keywords": [
+      "kill window",
+      "delete window"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>&</kbd>"
+    ]
+  },
+  {
+    "desc": "Previous window",
+    "cat": "Windows",
+    "keywords": [
+      "navigate"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>p</kbd>"
+    ]
+  },
+  {
+    "desc": "Next window",
+    "cat": "Windows",
+    "keywords": [
+      "navigate"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>n</kbd>"
+    ]
+  },
+  {
+    "desc": "Switch/select window by number",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>0</kbd> ... <kbd>9</kbd>"
+    ]
+  },
+  {
+    "desc": "Reorder window, swap window number 2(src) and 1(dst)",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [
+      "swap-window -s 2 -t 1"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Move current window to the left by one position",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [
+      "swap-window -t -1"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Toggle last active pane",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>;</kbd>"
+    ]
+  },
+  {
+    "desc": "Split pane vertically",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>%</kbd>"
+    ]
+  },
+  {
+    "desc": "Split pane horizontally",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>\"</kbd>"
+    ]
+  },
+  {
+    "desc": "Move the current pane left",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>{</kbd>"
+    ]
+  },
+  {
+    "desc": "Move the current pane right",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>}</kbd>"
+    ]
+  },
+  {
+    "desc": "Switch to pane to the direction",
+    "cat": "Panes",
+    "keywords": "navigate",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-up\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-down\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-right\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-left\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Toggle synchronize-panes(send command to all panes)",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [
+      "setw synchronize-panes"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Toggle between pane layouts",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Spacebar</kbd>"
+    ]
+  },
+  {
+    "desc": "Switch to next pane",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>o</kbd>"
+    ]
+  },
+  {
+    "desc": "Show pane numbers",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>q</kbd>"
+    ]
+  },
+  {
+    "desc": "Switch/select pane by number",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span><span class=\"kbd-margin\"><kbd>q</kbd> </span><kbd>0</kbd> ... <kbd>9</kbd>"
+    ]
+  },
+  {
+    "desc": "Toggle pane zoom",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>z</kbd>"
+    ]
+  },
+  {
+    "desc": "Convert pane into a window",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>!</kbd>"
+    ]
+  },
+  {
+    "desc": "Resize current pane height(holding second key is optional)",
+    "cat": "Panes",
+    "keywords": [
+      "resize up",
+      "resize down"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-up\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-up\"></i></kbd>",
+      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-down\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-down\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Resize current pane width(holding second key is optional)",
+    "cat": "Panes",
+    "keywords": [
+      "resize left",
+      "resize right"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-right\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-right\"></i></kbd>",
+      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-left\"></i></kbd>",
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-left\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Close current pane",
+    "cat": "Panes",
+    "keywords": [
+      "kill pane",
+      "delete pane"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>x</kbd>"
+    ]
+  },
+  {
+    "desc": "use vi keys in buffer",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "setw -g mode-keys vi"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Enter copy mode",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>[</kbd>"
+    ]
+  },
+  {
+    "desc": "Enter copy mode and scroll one page up",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>PgUp</kbd>"
+    ]
+  },
+  {
+    "desc": "Quit mode",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>q</kbd>"
+    ]
+  },
+  {
+    "desc": "Go to top line",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>g</kbd>"
+    ]
+  },
+  {
+    "desc": "Go to bottom line",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>G</kbd>"
+    ]
+  },
+  {
+    "desc": "Scroll up",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd><i class=\"fa fa-long-arrow-up\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Scroll down",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd><i class=\"fa fa-long-arrow-down\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Move cursor left",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>h</kbd>"
+    ]
+  },
+  {
+    "desc": "Move cursor down",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>j</kbd>"
+    ]
+  },
+  {
+    "desc": "Move cursor up",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>k</kbd>"
+    ]
+  },
+  {
+    "desc": "Move cursor right",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>l</kbd>"
+    ]
+  },
+  {
+    "desc": "Move cursor forward one word at a time",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>w</kbd>"
+    ]
+  },
+  {
+    "desc": "Move cursor backward one word at a time",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>b</kbd>"
+    ]
+  },
+  {
+    "desc": "Search forward",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>/</kbd>"
+    ]
+  },
+  {
+    "desc": "Search backward",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>?</kbd>"
+    ]
+  },
+  {
+    "desc": "Next keyword occurance",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>n</kbd>"
+    ]
+  },
+  {
+    "desc": "Previous keyword occurance",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>N</kbd>"
+    ]
+  },
+  {
+    "desc": "Start selection",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Spacebar</kbd>"
+    ]
+  },
+  {
+    "desc": "Clear selection",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Esc</kbd>"
+    ]
+  },
+  {
+    "desc": "Copy selection",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Enter</kbd>"
+    ]
+  },
+  {
+    "desc": "Paste contents of buffer_0",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>]</kbd>"
+    ]
+  },
+  {
+    "desc": "display buffer_0 contents",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "show-buffer"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "copy entire visible contents of pane to a buffer",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "capture-pane"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Show all buffers",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "list-buffers"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Show all buffers and paste selected",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "choose-buffer"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Save buffer contents to <i>buf.txt</i>",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "save-buffer buf.txt"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "delete buffer_1",
+    "cat": "Copy Mode",
+    "shell": [],
+    "tmuxcmd": [
+      "delete-buffer -b 1"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Enter command mode",
+    "cat": "Misc",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>:</kbd>"
+    ]
+  },
+  {
+    "desc": "Set OPTION for all sessions",
+    "cat": "Misc",
+    "shell": [],
+    "tmuxcmd": [
+      "set -g OPTION"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Set OPTION for all windows",
+    "cat": "Misc",
+    "shell": [],
+    "tmuxcmd": [
+      "setw -g OPTION"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Show every session, window, pane, etc...",
+    "cat": "Help",
+    "shell": [
+      "tmux info"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
+    "desc": "Show shortcuts",
+    "cat": "Help",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>?</kbd>"
+    ]
+  }
+]
