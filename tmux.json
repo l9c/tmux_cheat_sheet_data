@@ -612,7 +612,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>Enter</kbd>"
+      "<kbd> </kbd>"
     ]
   },
   {
@@ -702,6 +702,15 @@
     "shell": [],
     "tmuxcmd": [
       "setw -g OPTION"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Enable mouse mode",
+    "cat": "Misc",
+    "shell": [],
+    "tmuxcmd": [
+      "set mouse on"
     ],
     "shortcut": []
   },
