@@ -715,6 +715,19 @@
     "shortcut": []
   },
   {
+    "desc": "List key bindings(shortcuts)",
+    "cat": "Help",
+    "shell": [
+      "tmux list-keys"
+    ],
+    "tmuxcmd": [
+      "list-keys"
+    ],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>?</kbd>"
+    ]
+  },
+  {
     "desc": "Show every session, window, pane, etc...",
     "cat": "Help",
     "shell": [
@@ -722,14 +735,5 @@
     ],
     "tmuxcmd": [],
     "shortcut": []
-  },
-  {
-    "desc": "Show shortcuts",
-    "cat": "Help",
-    "shell": [],
-    "tmuxcmd": [],
-    "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>?</kbd>"
-    ]
   }
 ]
