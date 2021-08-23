@@ -137,6 +137,19 @@
     "tmuxcmd": [],
     "shortcut": []
   },
+   {
+    "desc": "Session and Window Preview",
+    "cat": "Sessions",
+    "keywords": [
+      "navigate",
+      "switch"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>w</kbd>"
+    ]
+  },  
   {
     "desc": "Move to previous session",
     "cat": "Sessions",
