@@ -256,6 +256,15 @@
     ]
   },
   {
+    "desc": "Toggle last active window",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>l</kbd>"
+    ]
+  },
+  {
     "desc": "Reorder window, swap window number 2(src) and 1(dst)",
     "cat": "Windows",
     "shell": [],
