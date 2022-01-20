@@ -292,7 +292,7 @@
     ]
   },
   {
-    "desc": "Split pane horizontally",
+    "desc": "Split pane with horizontal layout",
     "cat": "Panes",
     "shell": [],
     "tmuxcmd": [],
@@ -301,7 +301,7 @@
     ]
   },
   {
-    "desc": "Split pane vertically",
+    "desc": "Split pane with vertical layout",
     "cat": "Panes",
     "shell": [],
     "tmuxcmd": [],
