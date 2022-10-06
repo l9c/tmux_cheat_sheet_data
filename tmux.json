@@ -223,6 +223,19 @@
     ]
   },
   {
+    "desc": "List windows",
+    "cat": "Windows",
+    "keywords": [
+      "list window",
+      "show window"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>w</kbd>"
+    ]
+  },
+  {
     "desc": "Previous window",
     "cat": "Windows",
     "keywords": [
