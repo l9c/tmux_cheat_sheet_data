@@ -305,19 +305,19 @@
     ]
   },
   {
-    "desc": "Split pane with horizontal layout",
+    "desc": "Split the current pane with a vertical line to create a horizontal layout",
     "cat": "Panes",
     "shell": [],
-    "tmuxcmd": [],
+    "tmuxcmd": ["split-window -h"],
     "shortcut": [
       "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>%</kbd>"
     ]
   },
   {
-    "desc": "Split pane with vertical layout",
+    "desc": "Split the current pane with a horizontal line to create a vertical layout",
     "cat": "Panes",
     "shell": [],
-    "tmuxcmd": [],
+    "tmuxcmd": ["split-window -v"],
     "shortcut": [
       "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>\"</kbd>"
     ]
