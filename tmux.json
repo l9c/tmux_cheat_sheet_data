@@ -314,7 +314,21 @@
     ]
   },
   {
-    "desc": "Split the current pane with a horizontal line to create a vertical layout",
+    "desc": "Join two windows as panes (Merge window 2 to window 1 as panes)",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": ["join-pane -s 2 -t 1"],
+    "shortcut": []
+  },
+  {
+    "desc": "Move pane from one window to another (Move pane 1 from window 2 to pane after 0 of window 1)",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": ["join-pane -s 2.1 -t 1.0"],
+    "shortcut": []
+  },
+  {
+    "desc": "Split the current  with a horizontal line to create a vertical layout",
     "cat": "Panes",
     "shell": [],
     "tmuxcmd": ["split-window -v"],
