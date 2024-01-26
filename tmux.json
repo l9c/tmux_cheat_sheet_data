@@ -16,6 +16,20 @@
     "shortcut": []
   },
   {
+    "desc": "Start a new session or attach to an existing session named <i>mysession</i>",
+    "cat": "Sessions",
+    "keywords": [
+      "create",
+      "attach",
+      "join"
+    ],
+    "shell": [
+      "tmux new-session -A -s mysession"
+    ],
+    "tmuxcmd": [],
+    "shortcut": []
+  },
+  {
     "desc": "Start a new session with the name <i>mysession</i>",
     "cat": "Sessions",
     "keywords": [
