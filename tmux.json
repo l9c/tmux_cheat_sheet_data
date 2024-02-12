@@ -301,11 +301,29 @@
     "shortcut": []
   },
   {
+    "desc": "Renumber windows to remove gap in the sequence",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [
+      "movew"
+    ],
+    "shortcut": []
+  },
+  {
     "desc": "Move current window to the left by one position",
     "cat": "Windows",
     "shell": [],
     "tmuxcmd": [
       "swap-window -t -1"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Move window across sessions <i>If no target session the current one will be used</i>",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [
+      "move-window -s $session_id:$window_id [-t $session_id[:$window_id]]"
     ],
     "shortcut": []
   },
