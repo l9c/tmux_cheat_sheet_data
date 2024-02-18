@@ -314,7 +314,7 @@
     "cat": "Windows",
     "shell": [],
     "tmuxcmd": [
-      "move-window -s src_session:src_window -t target_session:target_window",
+      "move-window -s src_ses:win -t target_ses:win",
       "movew -s foo:0 -t bar:9",
       "movew -s 0:0 -t 1:9"
     ],
