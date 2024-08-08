@@ -44,6 +44,18 @@
     "shortcut": []
   },
   {
+    "desc": "kill/delete the current session",
+    "cat": "Sessions",
+    "keywords": [
+      "terminate"
+    ],
+    "shell": [],
+    "tmuxcmd": [
+      "kill-session"
+    ],
+    "shortcut": []
+  },
+  {
     "desc": "kill/delete session <i>mysession</i>",
     "cat": "Sessions",
     "keywords": [
