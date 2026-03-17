@@ -1,0 +1,1244 @@
+[
+  {
+    "cat": "Setup and Access",
+    "desc": "Install Claude Code globally so the claude command is available from any project directory.",
+    "command": [
+      "npm install -g @anthropic-ai/claude-code"
+    ],
+    "keywords": [
+      "install",
+      "setup",
+      "npm",
+      "global",
+      "getting started",
+      "package manager",
+      "installation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Start an interactive Claude Code session in the current project.",
+    "command": [
+      "claude"
+    ],
+    "keywords": [
+      "interactive",
+      "start session",
+      "repl",
+      "launch",
+      "begin"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Show the installed Claude Code version.",
+    "command": [
+      "claude -v"
+    ],
+    "keywords": [
+      "version",
+      "install check",
+      "verify",
+      "check version"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Run initialization hooks and start interactive mode.",
+    "command": [
+      "claude --init"
+    ],
+    "keywords": [
+      "init",
+      "initialization",
+      "hooks",
+      "startup"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Log in to your Claude account from the terminal. Use --email to pre-fill email or --sso to force SSO authentication.",
+    "command": [
+      "claude auth login"
+    ],
+    "keywords": [
+      "auth",
+      "login",
+      "account",
+      "sso",
+      "email",
+      "sign in",
+      "authenticate"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Show authentication status as JSON. Use --text for human-readable output. Exits with code 0 if logged in, 1 if not.",
+    "command": [
+      "claude auth status --text"
+    ],
+    "keywords": [
+      "auth",
+      "status",
+      "account",
+      "json",
+      "logged in",
+      "check login",
+      "authentication status"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Initialize project guidance files for the current project.",
+    "slash": [
+      "/init"
+    ],
+    "keywords": [
+      "init",
+      "claude md",
+      "project guidance",
+      "setup",
+      "initialize",
+      "project setup",
+      "hooks"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Open Claude memory management from inside the session.",
+    "slash": [
+      "/memory"
+    ],
+    "keywords": [
+      "memory",
+      "project guidance",
+      "notes",
+      "learning",
+      "context management"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Run Claude once in print mode and exit with a single response.",
+    "command": [
+      "claude -p \"explain this function\""
+    ],
+    "keywords": [
+      "print mode",
+      "non interactive",
+      "single shot",
+      "automation",
+      "sdk",
+      "one-off",
+      "exit immediately"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Open the current prompt in your default text editor.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>G</kbd>"
+    ],
+    "keywords": [
+      "editor",
+      "prompt editing",
+      "open editor",
+      "external editor",
+      "edit input"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Ask a side question without adding it to the main conversation history. Can run while Claude is working.",
+    "slash": [
+      "/btw what was the name of that config file again?"
+    ],
+    "keywords": [
+      "btw",
+      "side question",
+      "ephemeral",
+      "quick answer",
+      "instant answer",
+      "tangent"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Delete from the cursor to the end of the line.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>K</kbd>"
+    ],
+    "keywords": [
+      "kill line",
+      "editing",
+      "delete to end",
+      "erase",
+      "text editing",
+      "line ending"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Delete the entire current line.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>U</kbd>"
+    ],
+    "keywords": [
+      "delete line",
+      "editing",
+      "erase line",
+      "clear input",
+      "kill entire line",
+      "remove line"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Paste text deleted with readline kill commands.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>Y</kbd>"
+    ],
+    "keywords": [
+      "yank",
+      "paste history",
+      "editing",
+      "paste deleted",
+      "undo delete",
+      "restore text"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Cycle through earlier kill-ring entries after pasting.",
+    "shortcut": [
+      "<kbd>Alt</kbd> + <kbd>Y</kbd>"
+    ],
+    "keywords": [
+      "paste history",
+      "kill ring",
+      "editing",
+      "cycle pastes",
+      "previous paste",
+      "yank history"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Move the cursor back by one word.",
+    "shortcut": [
+      "<kbd>Alt</kbd> + <kbd>B</kbd>"
+    ],
+    "keywords": [
+      "word navigation",
+      "back word",
+      "cursor movement",
+      "move left",
+      "word boundary",
+      "backward"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Move the cursor forward by one word.",
+    "shortcut": [
+      "<kbd>Alt</kbd> + <kbd>F</kbd>"
+    ],
+    "keywords": [
+      "word navigation",
+      "forward word",
+      "cursor movement",
+      "move right",
+      "word boundary",
+      "forward"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Paste an image from the clipboard.",
+    "shortcut_by_os": {
+      "macos": "<kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>Cmd</kbd> + <kbd>V</kbd>",
+      "windows": "<kbd>Alt</kbd> + <kbd>V</kbd>",
+      "linux": "<kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>Alt</kbd> + <kbd>V</kbd>"
+    },
+    "keywords": [
+      "paste image",
+      "clipboard",
+      "screenshots",
+      "media input",
+      "image upload",
+      "paste media"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Insert a newline for multiline input.",
+    "shortcut": [
+      "<kbd>\\</kbd> + <kbd>Enter</kbd>",
+      "<kbd>Shift</kbd> + <kbd>Enter</kbd>",
+      "<kbd>Ctrl</kbd> + <kbd>J</kbd>"
+    ],
+    "shortcut_by_os": {
+      "macos": "<kbd>Option</kbd> + <kbd>Enter</kbd>",
+      "windows": "<kbd>Shift</kbd> + <kbd>Enter</kbd>",
+      "linux": "<kbd>Shift</kbd> + <kbd>Enter</kbd>"
+    },
+    "keywords": [
+      "multiline",
+      "line break",
+      "shift enter",
+      "option enter",
+      "ctrl j",
+      "new line",
+      "multiple lines"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Open the slash command picker from the start of the prompt.",
+    "shortcut": [
+      "<kbd>/</kbd>"
+    ],
+    "keywords": [
+      "quick commands",
+      "slash commands",
+      "command menu",
+      "commands",
+      "menu"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Enter bash mode from the start of the prompt.",
+    "shortcut": [
+      "<kbd>!</kbd>"
+    ],
+    "keywords": [
+      "bash mode",
+      "shell",
+      "terminal",
+      "run command",
+      "execute",
+      "command execution"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Trigger file path autocomplete.",
+    "shortcut": [
+      "<kbd>@</kbd>"
+    ],
+    "keywords": [
+      "mention",
+      "autocomplete",
+      "file path",
+      "file reference",
+      "file mention",
+      "path completion"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Accept a prompt suggestion for editing.",
+    "shortcut": [
+      "<kbd>Tab</kbd>"
+    ],
+    "keywords": [
+      "prompt suggestions",
+      "accept suggestion",
+      "edit suggestion",
+      "accept for editing"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Accept a prompt suggestion and submit it immediately.",
+    "shortcut": [
+      "<kbd>Enter</kbd>"
+    ],
+    "keywords": [
+      "prompt suggestions",
+      "accept suggestion",
+      "submit",
+      "accept and submit",
+      "execute suggestion"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Exit bash mode when the prompt is empty.",
+    "shortcut": [
+      "<kbd>Escape</kbd>",
+      "<kbd>Backspace</kbd>",
+      "<kbd>Ctrl</kbd> + <kbd>U</kbd>"
+    ],
+    "keywords": [
+      "exit bash mode",
+      "empty prompt",
+      "return to normal",
+      "exit shell",
+      "quit bash"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Dismiss a /btw side-question overlay and return to the main prompt.",
+    "shortcut": [
+      "<kbd>Space</kbd>",
+      "<kbd>Enter</kbd>",
+      "<kbd>Escape</kbd>"
+    ],
+    "keywords": [
+      "btw",
+      "dismiss overlay",
+      "side question",
+      "return to prompt",
+      "close overlay",
+      "dismiss"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Continue the latest conversation in the current directory.",
+    "command": [
+      "claude -c"
+    ],
+    "keywords": [
+      "continue",
+      "resume",
+      "latest session",
+      "pick up work",
+      "recent",
+      "previous work"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Resume a specific named conversation.",
+    "command": [
+      "claude --resume auth-refactor"
+    ],
+    "keywords": [
+      "resume",
+      "session name",
+      "named session",
+      "saved session",
+      "load"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Clear the current session and start a fresh conversation.",
+    "slash": [
+      "/clear"
+    ],
+    "keywords": [
+      "clear",
+      "reset",
+      "new session",
+      "fresh start",
+      "wipe",
+      "empty",
+      "start over"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Compact the current conversation to keep only the important context.",
+    "slash": [
+      "/compact \"keep only the important parts\""
+    ],
+    "keywords": [
+      "compact",
+      "context reset",
+      "session summary",
+      "compress",
+      "reduce context",
+      "summarize",
+      "shorten"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Resume another conversation from inside the current session.",
+    "slash": [
+      "/resume"
+    ],
+    "keywords": [
+      "resume",
+      "session management",
+      "alternate session",
+      "switch session",
+      "load conversation"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Rename the current conversation.",
+    "slash": [
+      "/rename feature-auth"
+    ],
+    "keywords": [
+      "rename",
+      "session management",
+      "change name",
+      "label session",
+      "rename conversation"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Fork the current conversation into a new branch of work.",
+    "slash": [
+      "/fork bug-investigation"
+    ],
+    "keywords": [
+      "fork",
+      "session management",
+      "branch conversation",
+      "branch work",
+      "split session",
+      "duplicate conversation"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Show how much context is currently in use.",
+    "slash": [
+      "/context"
+    ],
+    "keywords": [
+      "context",
+      "status",
+      "token usage",
+      "token count",
+      "context size",
+      "usage info"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Switch into planning mode.",
+    "slash": [
+      "/plan"
+    ],
+    "keywords": [
+      "plan mode",
+      "planning",
+      "planning mode",
+      "strategy"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Open the task list for the current session.",
+    "slash": [
+      "/tasks"
+    ],
+    "keywords": [
+      "tasks",
+      "task list",
+      "status",
+      "todo",
+      "progress",
+      "tracking"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Copy the current response to the clipboard.",
+    "slash": [
+      "/copy"
+    ],
+    "keywords": [
+      "copy",
+      "clipboard",
+      "save response",
+      "duplicate"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Export the current response to a file.",
+    "slash": [
+      "/export notes.txt"
+    ],
+    "keywords": [
+      "export",
+      "save transcript",
+      "download response",
+      "save to file",
+      "file output"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Rewind or summarize from the keyboard.",
+    "shortcut": [
+      "<kbd>Esc</kbd> + <kbd>Esc</kbd>"
+    ],
+    "keywords": [
+      "rewind",
+      "summarize",
+      "checkpoint",
+      "go back",
+      "restore conversation",
+      "undo"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Cancel the current input or generation.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>C</kbd>"
+    ],
+    "keywords": [
+      "interrupt",
+      "cancel",
+      "session control",
+      "stop",
+      "abort"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Kill all background agents.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>F</kbd>"
+    ],
+    "keywords": [
+      "kill background agents",
+      "session control",
+      "stop agents",
+      "terminate",
+      "force kill"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Exit the Claude Code session.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>D</kbd>"
+    ],
+    "keywords": [
+      "exit",
+      "session control",
+      "quit",
+      "logout",
+      "end session"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Clear the terminal screen while keeping conversation history.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>L</kbd>"
+    ],
+    "keywords": [
+      "clear screen",
+      "display",
+      "scrollback",
+      "reset screen",
+      "clean terminal"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Toggle verbose output for tool execution details.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>O</kbd>"
+    ],
+    "keywords": [
+      "verbose output",
+      "display",
+      "tool usage",
+      "debug info",
+      "detailed output",
+      "verbose mode"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Background running tasks. Tmux users press Ctrl+B twice.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>B</kbd>"
+    ],
+    "keywords": [
+      "background task",
+      "agent control",
+      "long running work",
+      "async",
+      "non-blocking",
+      "background process"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Show or hide the task list.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>T</kbd>"
+    ],
+    "keywords": [
+      "task list",
+      "status area",
+      "show tasks",
+      "toggle view",
+      "progress tracking"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Cycle through tabs in dialogs and menus.",
+    "shortcut": [
+      "<kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>",
+      "<kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>"
+    ],
+    "keywords": [
+      "dialog tabs",
+      "navigation",
+      "arrows",
+      "tab navigation",
+      "move between tabs"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Navigate command history.",
+    "shortcut": [
+      "<kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
+      "<kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>"
+    ],
+    "keywords": [
+      "history navigation",
+      "arrows",
+      "previous command",
+      "recall",
+      "command history"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Show the current diff inside Claude.",
+    "slash": [
+      "/diff"
+    ],
+    "keywords": [
+      "diff",
+      "review",
+      "changes",
+      "comparison",
+      "show changes"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Rewind the conversation to an earlier checkpoint.",
+    "slash": [
+      "/rewind"
+    ],
+    "keywords": [
+      "rewind",
+      "checkpoint",
+      "review",
+      "go back",
+      "undo",
+      "restore"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Pull pull request comments into the current session.",
+    "slash": [
+      "/pr-comments"
+    ],
+    "keywords": [
+      "pr comments",
+      "review",
+      "github",
+      "pull request",
+      "feedback"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Run Claude's environment health checks.",
+    "slash": [
+      "/doctor"
+    ],
+    "keywords": [
+      "doctor",
+      "troubleshooting",
+      "diagnostics",
+      "health check",
+      "verify installation",
+      "debug"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Show current Claude session and account status.",
+    "slash": [
+      "/status"
+    ],
+    "keywords": [
+      "status",
+      "diagnostics",
+      "session info",
+      "account info",
+      "current status"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Show current usage information.",
+    "slash": [
+      "/usage"
+    ],
+    "keywords": [
+      "usage",
+      "limits",
+      "diagnostics",
+      "token usage",
+      "quota",
+      "current usage"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Show current spend and cost information.",
+    "slash": [
+      "/cost"
+    ],
+    "keywords": [
+      "cost",
+      "spend",
+      "diagnostics",
+      "pricing",
+      "billing",
+      "expenses"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Review the current branch for security issues.",
+    "slash": [
+      "/security-review"
+    ],
+    "keywords": [
+      "security review",
+      "vulnerabilities",
+      "diff analysis",
+      "security check",
+      "vulnerability scan",
+      "code security"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Open the linked pull request from the footer.",
+    "shortcut_by_os": {
+      "macos": "<kbd>Cmd</kbd> + <kbd>Click</kbd>",
+      "windows": "<kbd>Ctrl</kbd> + <kbd>Click</kbd>",
+      "linux": "<kbd>Ctrl</kbd> + <kbd>Click</kbd>"
+    },
+    "keywords": [
+      "open pr",
+      "pull request",
+      "github",
+      "pr link",
+      "open link"
+    ]
+  },
+  {
+    "cat": "Reverse Search",
+    "desc": "Start reverse search through command history or cycle through older matches.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>R</kbd>"
+    ],
+    "keywords": [
+      "reverse search",
+      "history",
+      "search history",
+      "find command",
+      "command search"
+    ]
+  },
+  {
+    "cat": "Reverse Search",
+    "desc": "Accept the current reverse-search match for editing.",
+    "shortcut": [
+      "<kbd>Tab</kbd>",
+      "<kbd>Esc</kbd>"
+    ],
+    "keywords": [
+      "reverse search",
+      "accept match",
+      "history",
+      "edit match",
+      "accept for editing"
+    ]
+  },
+  {
+    "cat": "Reverse Search",
+    "desc": "Accept the current reverse-search match and execute it.",
+    "shortcut": [
+      "<kbd>Enter</kbd>"
+    ],
+    "keywords": [
+      "reverse search",
+      "execute match",
+      "history",
+      "run command",
+      "execute search result"
+    ]
+  },
+  {
+    "cat": "Reverse Search",
+    "desc": "Exit reverse search when the query is empty.",
+    "shortcut": [
+      "<kbd>Backspace</kbd>"
+    ],
+    "keywords": [
+      "reverse search",
+      "cancel search",
+      "history",
+      "exit search",
+      "empty query"
+    ]
+  },
+  {
+    "cat": "Reverse Search",
+    "desc": "Cancel reverse search and restore your original input.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>C</kbd>"
+    ],
+    "keywords": [
+      "reverse search",
+      "cancel search",
+      "restore input"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Open Claude configuration settings.",
+    "slash": [
+      "/config"
+    ],
+    "keywords": [
+      "config",
+      "settings",
+      "customize",
+      "preferences",
+      "configure",
+      "options"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Open the theme picker.",
+    "slash": [
+      "/theme"
+    ],
+    "keywords": [
+      "theme",
+      "display",
+      "appearance",
+      "dark mode",
+      "light mode",
+      "syntax highlighting"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Set the interface color theme.",
+    "slash": [
+      "/color orange"
+    ],
+    "keywords": [
+      "color",
+      "theme",
+      "appearance",
+      "customize colors",
+      "ui colors"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Open keybinding configuration.",
+    "slash": [
+      "/keybindings"
+    ],
+    "keywords": [
+      "keybindings",
+      "shortcuts",
+      "keyboard",
+      "custom keys",
+      "hotkeys",
+      "key mapping"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Install terminal-specific bindings such as Shift+Enter support.",
+    "slash": [
+      "/terminal-setup"
+    ],
+    "keywords": [
+      "terminal setup",
+      "bindings",
+      "shift enter",
+      "terminal config",
+      "multiline",
+      "shell setup"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Switch models from inside the current session.",
+    "slash": [
+      "/model"
+    ],
+    "keywords": [
+      "model",
+      "configuration",
+      "switch ai",
+      "change model",
+      "ai model",
+      "claude model"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Change the current reasoning effort level.",
+    "slash": [
+      "/effort high"
+    ],
+    "keywords": [
+      "effort",
+      "reasoning depth",
+      "thinking level",
+      "quality",
+      "performance",
+      "accuracy"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Toggle fast mode in the current session.",
+    "slash": [
+      "/fast on"
+    ],
+    "keywords": [
+      "fast mode",
+      "speed",
+      "performance",
+      "quick response",
+      "latency"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Open permission settings.",
+    "slash": [
+      "/permissions"
+    ],
+    "keywords": [
+      "permissions",
+      "guardrails",
+      "access control",
+      "approval",
+      "security",
+      "allow"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Open sandbox settings.",
+    "slash": [
+      "/sandbox"
+    ],
+    "keywords": [
+      "sandbox",
+      "security",
+      "isolation",
+      "protection",
+      "safety"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Manage MCP server integrations.",
+    "slash": [
+      "/mcp"
+    ],
+    "keywords": [
+      "mcp",
+      "integrations",
+      "model context protocol",
+      "extensions",
+      "plugins",
+      "tools"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Manage plugins from inside the session.",
+    "slash": [
+      "/plugin"
+    ],
+    "keywords": [
+      "plugin",
+      "extensions",
+      "add-ons",
+      "custom extensions",
+      "plugin management"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Reload installed plugins.",
+    "slash": [
+      "/reload-plugins"
+    ],
+    "keywords": [
+      "reload plugins",
+      "plugin",
+      "extensions",
+      "refresh",
+      "restart plugins"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Connect Claude Code to your IDE.",
+    "slash": [
+      "/ide"
+    ],
+    "keywords": [
+      "ide",
+      "editor integration",
+      "vscode",
+      "editor",
+      "ide connection"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Open agent and teammate options.",
+    "slash": [
+      "/agents"
+    ],
+    "keywords": [
+      "agents",
+      "teammates",
+      "subagents",
+      "team collaboration",
+      "ai team"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Toggle permission modes.",
+    "shortcut": [
+      "<kbd>Shift</kbd> + <kbd>Tab</kbd>",
+      "<kbd>Alt</kbd> + <kbd>M</kbd>"
+    ],
+    "keywords": [
+      "permission mode",
+      "auto accept",
+      "plan mode",
+      "toggle permissions",
+      "permission settings"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Switch models without clearing the current prompt.",
+    "shortcut_by_os": {
+      "macos": "<kbd>Option</kbd> + <kbd>P</kbd>",
+      "windows": "<kbd>Alt</kbd> + <kbd>P</kbd>",
+      "linux": "<kbd>Alt</kbd> + <kbd>P</kbd>"
+    },
+    "keywords": [
+      "switch model",
+      "model",
+      "change ai",
+      "ai model",
+      "quick switch"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Toggle extended thinking mode.",
+    "shortcut_by_os": {
+      "macos": "<kbd>Option</kbd> + <kbd>T</kbd>",
+      "windows": "<kbd>Alt</kbd> + <kbd>T</kbd>",
+      "linux": "<kbd>Alt</kbd> + <kbd>T</kbd>"
+    },
+    "keywords": [
+      "extended thinking",
+      "thinking mode",
+      "deep thinking",
+      "reasoning",
+      "complex reasoning"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Toggle syntax highlighting inside the theme picker.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>T</kbd>"
+    ],
+    "keywords": [
+      "theme picker",
+      "syntax highlighting",
+      "display",
+      "code colors",
+      "highlight code",
+      "toggle highlighting"
+    ]
+  },
+  {
+    "cat": "Help and Discovery",
+    "desc": "Open the built-in slash command help.",
+    "slash": [
+      "/help"
+    ],
+    "keywords": [
+      "help",
+      "commands",
+      "slash menu",
+      "documentation",
+      "guide",
+      "reference"
+    ]
+  },
+  {
+    "cat": "Help and Discovery",
+    "desc": "Open the available skills list.",
+    "slash": [
+      "/skills"
+    ],
+    "keywords": [
+      "skills",
+      "discover commands",
+      "slash menu",
+      "available commands",
+      "custom commands",
+      "extensions"
+    ]
+  },
+  {
+    "cat": "Help and Discovery",
+    "desc": "Open the shortcut legend for your current environment.",
+    "shortcut": [
+      "<kbd>?</kbd>"
+    ],
+    "keywords": [
+      "shortcut help",
+      "legend",
+      "available bindings",
+      "help commands",
+      "keyboard help"
+    ]
+  }
+]
