@@ -1,18 +1,136 @@
 [
   {
     "cat": "Setup and Access",
-    "desc": "Install Claude Code globally so the claude command is available from any project directory.",
-    "command": [
-      "npm install -g @anthropic-ai/claude-code"
-    ],
+    "desc": "Install Claude Code natively on macOS, Linux, or WSL with automatic background updates.",
+    "command_by_os": {
+      "macos": [
+        "curl -fsSL https://claude.ai/install.sh | bash"
+      ],
+      "linux": [
+        "curl -fsSL https://claude.ai/install.sh | bash"
+      ]
+    },
     "keywords": [
       "install",
       "setup",
-      "npm",
-      "global",
+      "native install",
+      "wsl",
       "getting started",
       "package manager",
       "installation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Install Claude Code with the native installer from Windows PowerShell with automatic background updates.",
+    "command_by_os": {
+      "windows": [
+        "irm https://claude.ai/install.ps1 | iex"
+      ]
+    },
+    "keywords": [
+      "install",
+      "setup",
+      "native install",
+      "powershell",
+      "windows",
+      "getting started",
+      "installation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Install Claude Code with the native installer from Windows CMD with automatic background updates.",
+    "command_by_os": {
+      "windows": [
+        "curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd"
+      ]
+    },
+    "keywords": [
+      "install",
+      "setup",
+      "native install",
+      "cmd",
+      "windows command prompt",
+      "windows",
+      "getting started",
+      "installation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Install Claude Code with Homebrew.",
+    "command_by_os": {
+      "macos": [
+        "brew install --cask claude-code"
+      ],
+      "linux": [
+        "brew install --cask claude-code"
+      ]
+    },
+    "keywords": [
+      "install",
+      "setup",
+      "homebrew",
+      "brew",
+      "macos",
+      "linux",
+      "package manager",
+      "installation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Homebrew installations do not auto-update. Run this command to get the latest features and security fixes.",
+    "command_by_os": {
+      "macos": [
+        "brew upgrade claude-code"
+      ],
+      "linux": [
+        "brew upgrade claude-code"
+      ]
+    },
+    "keywords": [
+      "update",
+      "upgrade",
+      "homebrew",
+      "brew",
+      "macos",
+      "linux",
+      "package manager"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Install Claude Code with WinGet on Windows.",
+    "command_by_os": {
+      "windows": [
+        "winget install Anthropic.ClaudeCode"
+      ]
+    },
+    "keywords": [
+      "install",
+      "setup",
+      "winget",
+      "windows",
+      "package manager",
+      "installation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "WinGet installations do not auto-update. Run this command to get the latest features and security fixes.",
+    "command_by_os": {
+      "windows": [
+        "winget upgrade Anthropic.ClaudeCode"
+      ]
+    },
+    "keywords": [
+      "update",
+      "upgrade",
+      "winget",
+      "windows",
+      "package manager"
     ]
   },
   {
@@ -40,6 +158,20 @@
       "install check",
       "verify",
       "check version"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Manually update Claude Code to the latest version.",
+    "command": [
+      "claude update"
+    ],
+    "keywords": [
+      "update",
+      "upgrade",
+      "latest",
+      "version",
+      "install"
     ]
   },
   {
