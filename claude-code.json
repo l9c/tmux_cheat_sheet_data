@@ -221,6 +221,35 @@
   },
   {
     "cat": "Setup and Access",
+    "desc": "Run a one-time task and get a response without starting an interactive session.",
+    "command": [
+      "claude \"write a test for this function\""
+    ],
+    "keywords": [
+      "one-time task",
+      "single task",
+      "run task",
+      "quick task",
+      "task execution"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Create a Git commit with Claude Code writing the commit message.",
+    "command": [
+      "claude commit"
+    ],
+    "keywords": [
+      "commit",
+      "git",
+      "git commit",
+      "version control",
+      "staging",
+      "message generation"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
     "desc": "Initialize project guidance files for the current project.",
     "slash": [
       "/init"
@@ -247,6 +276,51 @@
       "notes",
       "learning",
       "context management"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Sign in to your Anthropic account.",
+    "slash": [
+      "/login"
+    ],
+    "keywords": [
+      "login",
+      "sign in",
+      "authenticate",
+      "account",
+      "auth"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Sign out from your Anthropic account.",
+    "slash": [
+      "/logout"
+    ],
+    "keywords": [
+      "logout",
+      "sign out",
+      "disconnect",
+      "account",
+      "auth"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Show QR code to download the Claude mobile app.",
+    "slash": [
+      "/mobile",
+      "/ios",
+      "/android"
+    ],
+    "keywords": [
+      "mobile",
+      "ios",
+      "android",
+      "app download",
+      "phone",
+      "smartphone"
     ]
   },
   {
@@ -513,6 +587,20 @@
   },
   {
     "cat": "Prompting and Input",
+    "desc": "Toggle push-to-talk voice dictation.",
+    "slash": [
+      "/voice"
+    ],
+    "keywords": [
+      "voice",
+      "voice dictation",
+      "speech input",
+      "push-to-talk",
+      "audio input"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
     "desc": "Dismiss a /btw side-question overlay and return to the main prompt.",
     "shortcut": [
       "<kbd>Space</kbd>",
@@ -530,24 +618,10 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Continue the latest conversation in the current directory.",
+    "desc": "Continue most recent conversation in current directory.",
     "command": [
-      "claude -c"
-    ],
-    "keywords": [
-      "continue",
-      "resume",
-      "latest session",
-      "pick up work",
-      "recent",
-      "previous work"
-    ]
-  },
-  {
-    "cat": "Sessions and Context",
-    "desc": "Resume a specific named conversation.",
-    "command": [
-      "claude --resume auth-refactor"
+      "claude -c",
+      "claude --continue"
     ],
     "keywords": [
       "resume",
@@ -559,9 +633,26 @@
   },
   {
     "cat": "Sessions and Context",
+    "desc": "Resume a specific session by ID or name, or show an interactive picker to choose a session.",
+    "command": [
+      "claude --resume auth-refactor",
+      "claude -r"
+    ],
+    "keywords": [
+      "resume",
+      "session name",
+      "named session",
+      "saved session",
+      "load"
+    ]
+  },  
+  {
+    "cat": "Sessions and Context",
     "desc": "Clear the current session and start a fresh conversation.",
     "slash": [
-      "/clear"
+      "/clear",
+      "/reset",
+      "/new"
     ],
     "keywords": [
       "clear",
@@ -593,7 +684,8 @@
     "cat": "Sessions and Context",
     "desc": "Resume another conversation from inside the current session.",
     "slash": [
-      "/resume"
+      "/resume",
+      "/continue"
     ],
     "keywords": [
       "resume",
@@ -704,6 +796,71 @@
   },
   {
     "cat": "Sessions and Context",
+    "desc": "Transfer a terminal session to the desktop app or web for visual diff review and continued work.",
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "slash": [
+      "/desktop",
+      "/app"
+    ],
+    "keywords": [
+      "desktop",
+      "desktop app",
+      "visual diff",
+      "transfer session",
+      "move to desktop",
+      "routing"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Add a new working directory to the current session.",
+    "slash": [
+      "/add-dir <path>"
+    ],
+    "keywords": [
+      "add directory",
+      "working directory",
+      "multi-directory",
+      "context",
+      "file scope"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Create a branch of the current conversation at this point.",
+    "slash": [
+      "/branch feature-auth",
+      "/fork"
+    ],
+    "keywords": [
+      "branch",
+      "conversation branch",
+      "fork conversation",
+      "diverge work",
+      "parallel work"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Enable remote control of the current session from claude.ai.",
+    "slash": [
+      "/remote-control",
+      "/rc"
+    ],
+    "keywords": [
+      "remote control",
+      "rc",
+      "claude.ai",
+      "browser control",
+      "mobile control",
+      "remote session"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
     "desc": "Rewind or summarize from the keyboard.",
     "shortcut": [
       "<kbd>Esc</kbd> + <kbd>Esc</kbd>"
@@ -756,6 +913,21 @@
       "session control",
       "quit",
       "logout",
+      "end session"
+    ]
+  },
+  {
+    "cat": "Navigation and Control",
+    "desc": "Exit Claude Code from the command prompt.",
+    "slash": [
+      "/exit",
+      "/quit"
+    ],
+    "keywords": [
+      "exit",
+      "quit",
+      "session control",
+      "leave",
       "end session"
     ]
   },
@@ -865,7 +1037,8 @@
     "cat": "Review and Diagnostics",
     "desc": "Rewind the conversation to an earlier checkpoint.",
     "slash": [
-      "/rewind"
+      "/rewind",
+      "/checkpoint"
     ],
     "keywords": [
       "rewind",
@@ -917,6 +1090,36 @@
       "session info",
       "account info",
       "current status"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Show detailed conversation and usage statistics including session history and streaks.",
+    "slash": [
+      "/stats"
+    ],
+    "keywords": [
+      "stats",
+      "statistics",
+      "usage",
+      "session history",
+      "analytics",
+      "daily usage"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Generate a report analyzing Claude Code sessions, interaction patterns, and friction points.",
+    "slash": [
+      "/insights"
+    ],
+    "keywords": [
+      "insights",
+      "analysis",
+      "report",
+      "session analysis",
+      "patterns",
+      "usage report"
     ]
   },
   {
@@ -1053,7 +1256,8 @@
     "cat": "Configuration and Integrations",
     "desc": "Open Claude configuration settings.",
     "slash": [
-      "/config"
+      "/config",
+      "/settings"
     ],
     "keywords": [
       "config",
@@ -1171,7 +1375,8 @@
     "cat": "Configuration and Integrations",
     "desc": "Open permission settings.",
     "slash": [
-      "/permissions"
+      "/permissions",
+      "/allowed-tools"
     ],
     "keywords": [
       "permissions",
@@ -1269,6 +1474,51 @@
   },
   {
     "cat": "Configuration and Integrations",
+    "desc": "View hook configurations for tool events and automations.",
+    "slash": [
+      "/hooks"
+    ],
+    "keywords": [
+      "hooks",
+      "automation",
+      "before/after",
+      "events",
+      "trigger",
+      "auto-format",
+      "event hooks"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Toggle between Vim and Normal editing modes.",
+    "slash": [
+      "/vim"
+    ],
+    "keywords": [
+      "vim",
+      "vim mode",
+      "editing mode",
+      "terminal editor",
+      "keybindings",
+      "vi mode"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Configure Claude Code's status line display in your shell prompt.",
+    "slash": [
+      "/statusline"
+    ],
+    "keywords": [
+      "statusline",
+      "status line",
+      "prompt display",
+      "shell prompt",
+      "customize status"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
     "desc": "Toggle permission modes.",
     "shortcut": [
       "<kbd>Shift</kbd> + <kbd>Tab</kbd>",
@@ -1357,6 +1607,35 @@
       "available commands",
       "custom commands",
       "extensions"
+    ]
+  },
+  {
+    "cat": "Help and Discovery",
+    "desc": "View the full changelog with recent version updates.",
+    "slash": [
+      "/release-notes"
+    ],
+    "keywords": [
+      "release notes",
+      "changelog",
+      "updates",
+      "version history",
+      "what's new"
+    ]
+  },
+  {
+    "cat": "Help and Discovery",
+    "desc": "Submit feedback or report bugs about Claude Code.",
+    "slash": [
+      "/feedback",
+      "/bug"
+    ],
+    "keywords": [
+      "feedback",
+      "bug report",
+      "issue",
+      "suggestion",
+      "improvement"
     ]
   },
   {
