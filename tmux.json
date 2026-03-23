@@ -98,7 +98,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>$</kbd>"
+      "<prefix/> <kbd>$</kbd>"
     ]
   },
   {
@@ -110,7 +110,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>d</kbd>"
+      "<prefix/> <kbd>d</kbd>"
     ]
   },
   {
@@ -136,7 +136,7 @@
     ],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>s</kbd>"
+      "<prefix/> <kbd>s</kbd>"
     ]
   },
   {
@@ -173,7 +173,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>w</kbd>"
+      "<prefix/> <kbd>w</kbd>"
     ]
   },  
   {
@@ -186,7 +186,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>(</kbd>"
+      "<prefix/> <kbd>(</kbd>"
     ]
   },
   {
@@ -199,7 +199,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>)</kbd>"
+      "<prefix/> <kbd>)</kbd>"
     ]
   },
   {
@@ -223,7 +223,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>c</kbd>"
+      "<prefix/> <kbd>c</kbd>"
     ]
   },
   {
@@ -232,7 +232,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>,</kbd>"
+      "<prefix/> <kbd>,</kbd>"
     ]
   },
   {
@@ -245,7 +245,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>&</kbd>"
+      "<prefix/> <kbd>&</kbd>"
     ]
   },
   {
@@ -258,7 +258,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>w</kbd>"
+      "<prefix/> <kbd>w</kbd>"
     ]
   },
   {
@@ -270,7 +270,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>p</kbd>"
+      "<prefix/> <kbd>p</kbd>"
     ]
   },
   {
@@ -282,7 +282,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>n</kbd>"
+      "<prefix/> <kbd>n</kbd>"
     ]
   },
   {
@@ -291,7 +291,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>0</kbd> ... <kbd>9</kbd>"
+      "<prefix/> <kbd>0</kbd> ... <kbd>9</kbd>"
     ]
   },
   {
@@ -300,7 +300,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>l</kbd>"
+      "<prefix/> <kbd>l</kbd>"
     ]
   },
   {
@@ -358,7 +358,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>;</kbd>"
+      "<prefix/> <kbd>;</kbd>"
     ]
   },
   {
@@ -367,7 +367,7 @@
     "shell": [],
     "tmuxcmd": ["split-window -h"],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>%</kbd>"
+      "<prefix/> <kbd>%</kbd>"
     ]
   },
   {
@@ -376,7 +376,7 @@
     "shell": [],
     "tmuxcmd": ["split-window -v"],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>\"</kbd>"
+      "<prefix/> <kbd>\"</kbd>"
     ]
   },
   {
@@ -399,7 +399,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>{</kbd>"
+      "<prefix/> <kbd>{</kbd>"
     ]
   },
   {
@@ -408,7 +408,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>}</kbd>"
+      "<prefix/> <kbd>}</kbd>"
     ]
   },
   {
@@ -418,10 +418,10 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>"
+      "<prefix/> <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
+      "<prefix/> <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>",
+      "<prefix/> <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>",
+      "<prefix/> <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>"
     ]
   },
   {
@@ -439,7 +439,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Spacebar</kbd>"
+      "<prefix/> <kbd>Spacebar</kbd>"
     ]
   },
   {
@@ -448,7 +448,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>o</kbd>"
+      "<prefix/> <kbd>o</kbd>"
     ]
   },
   {
@@ -457,7 +457,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>q</kbd>"
+      "<prefix/> <kbd>q</kbd>"
     ]
   },
   {
@@ -466,7 +466,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span><span class=\"kbd-margin\"><kbd>q</kbd> </span><kbd>0</kbd> ... <kbd>9</kbd>"
+      "<prefix/> <span class=\"kbd-margin\"><kbd>q</kbd> </span><kbd>0</kbd> ... <kbd>9</kbd>"
     ]
   },
   {
@@ -475,7 +475,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>z</kbd>"
+      "<prefix/> <kbd>z</kbd>"
     ]
   },
   {
@@ -484,7 +484,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>!</kbd>"
+      "<prefix/> <kbd>!</kbd>"
     ]
   },
   {
@@ -497,10 +497,10 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
-      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>"
+      "<prefix style=\"margin-right:0\"/> + <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
+      "<prefix/> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>",
+      "<prefix style=\"margin-right:0\"/> + <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>",
+      "<prefix/> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>"
     ]
   },
   {
@@ -513,10 +513,10 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>",
-      "<span class=\"prefix\" style=\"margin-right:0\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> + <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>",
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>"
+      "<prefix style=\"margin-right:0\"/> + <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>",
+      "<prefix/> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>",
+      "<prefix style=\"margin-right:0\"/> + <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>",
+      "<prefix/> <kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd>"
     ]
   },
   {
@@ -529,7 +529,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>x</kbd>"
+      "<prefix/> <kbd>x</kbd>"
     ]
   },
   {
@@ -547,7 +547,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>[</kbd>"
+      "<prefix/> <kbd>[</kbd>"
     ]
   },
   {
@@ -556,7 +556,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>PgUp</kbd>"
+      "<prefix/> <kbd>PgUp</kbd>"
     ]
   },
   {
@@ -727,7 +727,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>]</kbd>"
+      "<prefix/> <kbd>]</kbd>"
     ]
   },
   {
@@ -790,7 +790,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>:</kbd>"
+      "<prefix/> <kbd>:</kbd>"
     ]
   },
   {
@@ -830,7 +830,7 @@
       "list-keys"
     ],
     "shortcut": [
-      "<span class=\"prefix\"><kbd>Ctrl</kbd> + <kbd>b</kbd> </span> <kbd>?</kbd>"
+      "<prefix/> <kbd>?</kbd>"
     ]
   },
   {
