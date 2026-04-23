@@ -304,6 +304,15 @@
     ]
   },
   {
+    "desc": "Open Window actions menu",
+    "cat": "Windows",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>&lt;</kbd>"
+    ]
+  },
+  {
     "desc": "Reorder window, swap window number 2(src) and 1(dst)",
     "cat": "Windows",
     "shell": [],
