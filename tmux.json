@@ -304,7 +304,7 @@
     ]
   },
   {
-    "desc": "Open Window actions menu",
+    "desc": "Open window actions menu",
     "cat": "Windows",
     "shell": [],
     "tmuxcmd": [],
@@ -827,6 +827,15 @@
     "tmuxcmd": [
       "set mouse on"
     ],
+    "shortcut": []
+  },
+  {
+    "desc": "Print tmux version",
+    "cat": "Misc",
+    "shell": [
+      "tmux -V"
+    ],
+    "tmuxcmd": [],
     "shortcut": []
   },
   {
