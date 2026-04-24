@@ -542,6 +542,15 @@
     ]
   },
   {
+    "desc": "Open pane actions menu",
+    "cat": "Panes",
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>&gt;</kbd>"
+    ]
+  },
+  {
     "desc": "use vi keys in buffer",
     "cat": "Copy Mode",
     "shell": [],
