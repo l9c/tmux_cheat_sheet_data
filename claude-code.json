@@ -324,6 +324,24 @@
     ]
   },
   {
+    "cat": "Setup and Access",
+    "desc": "Bring configuration from OpenAI Codex, Google Gemini CLI, or Cursor into Claude Code, including instruction files, MCP servers, commands, subagents, and skills.",
+    "slash": [
+      "/import codex",
+      "/import gemini",
+      "/import cursor"
+    ],
+    "keywords": [
+      "import",
+      "migrate",
+      "codex",
+      "gemini cli",
+      "cursor",
+      "migration",
+      "switch tools"
+    ]
+  },
+  {
     "cat": "Prompting and Input",
     "desc": "Run Claude once in print mode and exit with a single response.",
     "command": [
@@ -343,7 +361,8 @@
     "cat": "Prompting and Input",
     "desc": "Open the current prompt in your default text editor.",
     "shortcut": [
-      "<kbd>Ctrl</kbd> + <kbd>G</kbd>"
+      "<kbd>Ctrl</kbd> + <kbd>G</kbd>",
+      "<kbd>Ctrl</kbd> + <kbd>X</kbd> then <kbd>Ctrl</kbd> + <kbd>E</kbd>"
     ],
     "keywords": [
       "editor",
@@ -617,6 +636,211 @@
     ]
   },
   {
+    "cat": "Prompting and Input",
+    "desc": "Set a goal: Claude keeps working across turns until the condition is met. Pass clear to remove an active goal early.",
+    "slash": [
+      "/goal all tests passing",
+      "/goal clear"
+    ],
+    "keywords": [
+      "goal",
+      "autonomous",
+      "keep working",
+      "until done",
+      "objective",
+      "iterate"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Run a prompt repeatedly while the session stays open, with an interval such as 5m, or let Claude self-pace. Alias: /proactive.",
+    "slash": [
+      "/loop 5m check if the deploy finished"
+    ],
+    "keywords": [
+      "loop",
+      "proactive",
+      "repeat prompt",
+      "interval",
+      "polling",
+      "scheduled prompt",
+      "watch"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Create, update, list, or run routines, which execute in the cloud on a schedule. Alias: /routines.",
+    "slash": [
+      "/schedule"
+    ],
+    "keywords": [
+      "schedule",
+      "routines",
+      "cron",
+      "recurring",
+      "automation",
+      "cloud tasks"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Fan out web searches on a question, fetch and cross-check sources, and synthesize a cited report.",
+    "slash": [
+      "/deep-research compare state of the art RAG approaches"
+    ],
+    "keywords": [
+      "deep research",
+      "research",
+      "web search",
+      "report",
+      "sources",
+      "citations"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Stash the current prompt for later. With text in the input, stashes it and clears the prompt; pressed again on an empty prompt, restores the stashed text.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>S</kbd>"
+    ],
+    "keywords": [
+      "stash prompt",
+      "save draft",
+      "restore input",
+      "park text",
+      "prompt draft"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Move the cursor to the start of the current line. In multiline input, moves to the start of the current logical line.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>A</kbd>"
+    ],
+    "keywords": [
+      "home",
+      "beginning of line",
+      "cursor start",
+      "line start",
+      "navigation"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Move the cursor to the end of the current line. In multiline input, moves to the end of the current logical line.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>E</kbd>"
+    ],
+    "keywords": [
+      "end",
+      "end of line",
+      "cursor end",
+      "line end",
+      "navigation"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Delete back to the previous whitespace. One press removes a whole path or --flag=value.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>W</kbd>"
+    ],
+    "keywords": [
+      "delete word",
+      "delete path",
+      "delete back",
+      "word removal",
+      "whitespace"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Delete to the end of the current word, or to the end of the next word when the cursor is between words.",
+    "shortcut": [
+      "<kbd>Alt</kbd> + <kbd>D</kbd>"
+    ],
+    "keywords": [
+      "delete to end of word",
+      "kill word",
+      "word removal",
+      "editing"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Undo the last input edit, restoring the previous input text and cursor position.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>_</kbd>",
+      "<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd>"
+    ],
+    "keywords": [
+      "undo input",
+      "undo edit",
+      "restore prompt",
+      "revert typing"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Send your queued messages, and your draft with them, right away while Claude is still working.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>Enter</kbd>",
+      "<kbd>Ctrl</kbd> + <kbd>X</kbd> then <kbd>Ctrl</kbd> + <kbd>S</kbd>"
+    ],
+    "keywords": [
+      "send queued",
+      "queue messages",
+      "flush queue",
+      "send now",
+      "interrupt queue"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Get JSON output from print mode for scripts and automation.",
+    "command": [
+      "claude -p \"query\" --output-format json"
+    ],
+    "keywords": [
+      "json output",
+      "output format",
+      "scripting",
+      "automation",
+      "stream json",
+      "parse output"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Enable automatic fallback to a specified model when the default model is overloaded (print mode only).",
+    "command": [
+      "claude -p --fallback-model sonnet \"query\""
+    ],
+    "keywords": [
+      "fallback model",
+      "overloaded",
+      "reliability",
+      "print mode",
+      "sonnet"
+    ]
+  },
+  {
+    "cat": "Prompting and Input",
+    "desc": "Limit agentic turns or set a spending cap for print mode runs.",
+    "command": [
+      "claude -p --max-turns 3 \"query\"",
+      "claude -p --max-budget-usd 5.00 \"query\""
+    ],
+    "keywords": [
+      "max turns",
+      "budget cap",
+      "cost limit",
+      "spend limit",
+      "guardrails",
+      "automation limits"
+    ]
+  },
+  {
     "cat": "Sessions and Context",
     "desc": "Continue most recent conversation in current directory.",
     "command": [
@@ -645,7 +869,7 @@
       "saved session",
       "load"
     ]
-  },  
+  },
   {
     "cat": "Sessions and Context",
     "desc": "Clear the current session and start a fresh conversation.",
@@ -711,17 +935,17 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Fork the current conversation into a new branch of work.",
+    "desc": "Copy the current conversation into a new background session and keep working here. Pass a prompt to start the copy on it immediately. To switch into a branch yourself, use /branch; to hand a task to a subagent that reports back, use /subtask.",
     "slash": [
       "/fork bug-investigation"
     ],
     "keywords": [
       "fork",
       "session management",
-      "branch conversation",
-      "branch work",
+      "background session",
+      "copy conversation",
       "split session",
-      "duplicate conversation"
+      "parallel work"
     ]
   },
   {
@@ -741,9 +965,9 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Switch into planning mode.",
+    "desc": "Enter plan mode, optionally passing a task description to start planning immediately.",
     "slash": [
-      "/plan"
+      "/plan fix the auth bug"
     ],
     "keywords": [
       "plan mode",
@@ -769,7 +993,7 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Copy the current response to the clipboard.",
+    "desc": "Copy the last assistant response to the clipboard. Pass a number N to copy the Nth-latest response, or pick individual code blocks from the interactive picker.",
     "slash": [
       "/copy"
     ],
@@ -872,6 +1096,194 @@
       "go back",
       "restore conversation",
       "undo"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Detach the current session to run as a background agent and free your terminal. Pass a prompt to send one more instruction before detaching. Alias: /bg.",
+    "slash": [
+      "/background"
+    ],
+    "keywords": [
+      "background",
+      "bg",
+      "detach",
+      "background agent",
+      "free terminal",
+      "async session"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Spawn a forked subagent that inherits the full conversation and works on the task while you keep working. Its result returns to this conversation when it finishes.",
+    "slash": [
+      "/subtask refactor the auth module"
+    ],
+    "keywords": [
+      "subtask",
+      "subagent",
+      "fork subagent",
+      "delegate",
+      "background task",
+      "parallel work"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Move the session to a new working directory while keeping the conversation.",
+    "slash": [
+      "/cd ../other-project"
+    ],
+    "keywords": [
+      "cd",
+      "change directory",
+      "working directory",
+      "move session",
+      "switch project"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Generate a one-line summary of the current session on demand.",
+    "slash": [
+      "/recap"
+    ],
+    "keywords": [
+      "recap",
+      "summary",
+      "session summary",
+      "what did i miss",
+      "catch up"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Pull a cloud session from claude.ai into this terminal. Opens a picker, then fetches the branch and conversation. Alias: /tp.",
+    "slash": [
+      "/teleport"
+    ],
+    "keywords": [
+      "teleport",
+      "cloud session",
+      "web session",
+      "tp",
+      "continue cloud work",
+      "download session"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Set the auto-compact window: how full the context window gets before Claude Code compacts automatically. Pass a size such as 500k, or auto for the model-tuned default.",
+    "slash": [
+      "/autocompact 500k",
+      "/autocompact auto"
+    ],
+    "keywords": [
+      "autocompact",
+      "auto compact",
+      "context window",
+      "compaction",
+      "token limit",
+      "memory management"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Start Claude in an isolated git worktree at .claude/worktrees/<name> so parallel sessions do not conflict. If no name is given, one is auto-generated.",
+    "command": [
+      "claude -w feature-auth",
+      "claude --worktree"
+    ],
+    "keywords": [
+      "worktree",
+      "isolated branch",
+      "parallel sessions",
+      "git worktree",
+      "safe edits"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Set a display name for the session, shown in /resume and the terminal title. Resume it later with claude --resume <name>.",
+    "command": [
+      "claude -n \"my-feature-work\""
+    ],
+    "keywords": [
+      "name session",
+      "named session",
+      "session name",
+      "label",
+      "resume by name"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "When resuming, create a new session ID instead of reusing the original, keeping the original conversation untouched.",
+    "command": [
+      "claude --resume abc123 --fork-session"
+    ],
+    "keywords": [
+      "fork session",
+      "copy conversation",
+      "resume copy",
+      "branch session",
+      "non destructive"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Resume sessions linked to a specific GitHub PR (auto-linked when created via gh pr create).",
+    "command": [
+      "claude --from-pr 123"
+    ],
+    "keywords": [
+      "from pr",
+      "pull request",
+      "github",
+      "pr session",
+      "resume pr"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Resume a web session from claude.ai in your local terminal.",
+    "command": [
+      "claude --teleport"
+    ],
+    "keywords": [
+      "teleport",
+      "web session",
+      "cloud session",
+      "local resume",
+      "claude.ai"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Create a new web session on claude.ai with the provided task description.",
+    "command": [
+      "claude --remote \"Fix the login bug\""
+    ],
+    "keywords": [
+      "remote",
+      "cloud session",
+      "claude.ai",
+      "web task",
+      "offload work"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Start an interactive session with Remote Control enabled so you can also control it from claude.ai or the Claude app.",
+    "command": [
+      "claude --remote-control \"My Project\""
+    ],
+    "keywords": [
+      "remote control",
+      "rc",
+      "claude app",
+      "control remotely",
+      "mobile control"
     ]
   },
   {
@@ -1020,6 +1432,21 @@
     ]
   },
   {
+    "cat": "Navigation and Control",
+    "desc": "Suspend Claude Code to your shell (Unix only). Run fg to resume.",
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <kbd>Z</kbd>"
+    ],
+    "keywords": [
+      "suspend",
+      "background process",
+      "unix",
+      "shell job",
+      "pause",
+      "fg"
+    ]
+  },
+  {
     "cat": "Review and Diagnostics",
     "desc": "Show the current diff inside Claude.",
     "slash": [
@@ -1038,7 +1465,8 @@
     "desc": "Rewind the conversation to an earlier checkpoint.",
     "slash": [
       "/rewind",
-      "/checkpoint"
+      "/checkpoint",
+      "/undo"
     ],
     "keywords": [
       "rewind",
@@ -1051,23 +1479,10 @@
   },
   {
     "cat": "Review and Diagnostics",
-    "desc": "Pull pull request comments into the current session.",
+    "desc": "Run a setup checkup that diagnoses installation, settings, extension, and CLAUDE.md problems and proposes fixes Claude applies after you confirm.",
     "slash": [
-      "/pr-comments"
-    ],
-    "keywords": [
-      "pr comments",
-      "review",
-      "github",
-      "pull request",
-      "feedback"
-    ]
-  },
-  {
-    "cat": "Review and Diagnostics",
-    "desc": "Run Claude's environment health checks.",
-    "slash": [
-      "/doctor"
+      "/doctor",
+      "/checkup"
     ],
     "keywords": [
       "doctor",
@@ -1184,6 +1599,70 @@
     ]
   },
   {
+    "cat": "Review and Diagnostics",
+    "desc": "Review the current diff, or a PR number, branch, or path, for correctness bugs. Pass --fix to apply findings, --comment to post them on the PR, or ultra for a deep multi-agent cloud review. Alias: /review.",
+    "slash": [
+      "/code-review",
+      "/code-review high 1234",
+      "/code-review ultra --fix",
+      "/review"
+    ],
+    "keywords": [
+      "code review",
+      "review",
+      "correctness",
+      "bugs",
+      "pr review",
+      "ultrareview",
+      "code-review"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Review the changed code for cleanup opportunities and apply the fixes. Four agents run in parallel covering reuse, simplification, efficiency, and abstraction level. Does not look for correctness bugs; use /code-review for those.",
+    "slash": [
+      "/simplify"
+    ],
+    "keywords": [
+      "simplify",
+      "cleanup",
+      "refactor",
+      "dead code",
+      "efficiency",
+      "code quality"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Confirm a code change does what it should by building the app, running it, and observing the result, rather than relying on tests or type checks.",
+    "slash": [
+      "/verify"
+    ],
+    "keywords": [
+      "verify",
+      "validate change",
+      "run app",
+      "manual test",
+      "smoke test",
+      "confirm behavior"
+    ]
+  },
+  {
+    "cat": "Review and Diagnostics",
+    "desc": "Enable debug logging for the current session and troubleshoot issues by reading the session debug log. Optionally describe the issue to focus the analysis.",
+    "slash": [
+      "/debug login fails on safari"
+    ],
+    "keywords": [
+      "debug",
+      "debug logging",
+      "troubleshooting",
+      "diagnostics",
+      "logs",
+      "runtime issues"
+    ]
+  },
+  {
     "cat": "Reverse Search",
     "desc": "Start reverse search through command history or cycle through older matches.",
     "shortcut": [
@@ -1254,10 +1733,11 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Open Claude configuration settings.",
+    "desc": "Open the Settings interface, or pass key=value pairs to set a setting directly, such as /config thinking=false or /config model=sonnet.",
     "slash": [
       "/config",
-      "/settings"
+      "/settings",
+      "/config theme=dark"
     ],
     "keywords": [
       "config",
@@ -1490,15 +1970,15 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Toggle between Vim and Normal editing modes.",
+    "desc": "Toggle between Vim and Normal editing modes from the Settings interface. Removed as the /vim command in v2.1.92.",
     "slash": [
-      "/vim"
+      "/config"
     ],
     "keywords": [
       "vim",
       "vim mode",
       "editing mode",
-      "terminal editor",
+      "editor mode",
       "keybindings",
       "vi mode"
     ]
@@ -1650,6 +2130,196 @@
       "available bindings",
       "help commands",
       "keyboard help"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Configure usage credits, or request them from your admin, when you hit a rate limit. Previously /extra-usage.",
+    "slash": [
+      "/usage-credits"
+    ],
+    "keywords": [
+      "usage credits",
+      "extra usage",
+      "rate limit",
+      "billing",
+      "limits",
+      "quota"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "List output styles or switch to one.",
+    "slash": [
+      "/output-style concise"
+    ],
+    "keywords": [
+      "output style",
+      "response style",
+      "verbosity",
+      "tone",
+      "formatting"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Describe a settings change, such as allowing a command or adding a hook, and Claude edits the matching settings.json file. For theme and model, use /config instead.",
+    "slash": [
+      "/update-config allow npm test without prompting"
+    ],
+    "keywords": [
+      "update config",
+      "settings json",
+      "allow command",
+      "environment variable",
+      "hook setup"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project settings to reduce permission prompts.",
+    "slash": [
+      "/fewer-permission-prompts"
+    ],
+    "keywords": [
+      "permission prompts",
+      "allowlist",
+      "fewer prompts",
+      "auto approve",
+      "permissions",
+      "reduce friction"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Show what each of your skills costs in context and how often it gets used, so you can find skills to turn off.",
+    "slash": [
+      "/skill-doctor"
+    ],
+    "keywords": [
+      "skill doctor",
+      "skills",
+      "context cost",
+      "token usage",
+      "unused skills",
+      "skill diagnostics"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "List the subagents, agent team teammates, and other Claude Code sessions Claude can message, with the name to use for each. Alias: /peers.",
+    "slash": [
+      "/list-agents",
+      "/peers"
+    ],
+    "keywords": [
+      "list agents",
+      "peers",
+      "teammates",
+      "cross-session messaging",
+      "agent teams",
+      "send message"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Toggle fast mode on or off.",
+    "shortcut_by_os": {
+      "macos": "<kbd>Option</kbd> + <kbd>O</kbd>",
+      "windows": "<kbd>Alt</kbd> + <kbd>O</kbd>",
+      "linux": "<kbd>Alt</kbd> + <kbd>O</kbd>"
+    },
+    "keywords": [
+      "fast mode",
+      "speed",
+      "toggle fast",
+      "latency",
+      "quick responses"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Define custom subagents dynamically at launch via JSON, using the same fields as subagent frontmatter plus a prompt field.",
+    "command": [
+      "claude --agents '{\"reviewer\":{\"description\":\"Reviews code\",\"prompt\":\"You are a code reviewer\"}}'"
+    ],
+    "keywords": [
+      "agents",
+      "subagents",
+      "custom agents",
+      "json agents",
+      "launch agents"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Restrict which built-in tools Claude can use. Use \"\" to disable all, \"default\" for all, or list tool names.",
+    "command": [
+      "claude --tools \"Bash,Edit,Read\""
+    ],
+    "keywords": [
+      "tools",
+      "restrict tools",
+      "disable tools",
+      "allowed tools",
+      "tool selection"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Set the effort level for the session at launch: low, medium, high, or max (Opus only, session-scoped).",
+    "command": [
+      "claude --effort high"
+    ],
+    "keywords": [
+      "effort",
+      "reasoning depth",
+      "thinking level",
+      "launch flag",
+      "quality"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Add additional working directories for Claude to access at launch.",
+    "command": [
+      "claude --add-dir ../apps ../lib"
+    ],
+    "keywords": [
+      "add dir",
+      "working directories",
+      "multi directory",
+      "file access",
+      "launch flag"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Begin the session in a specified permission mode, such as plan.",
+    "command": [
+      "claude --permission-mode plan"
+    ],
+    "keywords": [
+      "permission mode",
+      "plan mode",
+      "accept edits",
+      "bypass permissions",
+      "launch flag"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Load MCP servers from JSON files or strings, optionally ignoring all other MCP configuration.",
+    "command": [
+      "claude --mcp-config ./mcp.json",
+      "claude --strict-mcp-config --mcp-config ./mcp.json"
+    ],
+    "keywords": [
+      "mcp config",
+      "mcp servers",
+      "strict mcp",
+      "load mcp",
+      "json config"
     ]
   }
 ]
