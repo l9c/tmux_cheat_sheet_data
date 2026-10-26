@@ -551,6 +551,131 @@
     ]
   },
   {
+    "desc": "Create a floating pane",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "overlay",
+      "popup"
+    ],
+    "shell": [
+      "tmux new-pane"
+    ],
+    "tmuxcmd": [
+      "new-pane"
+    ],
+    "shortcut": [
+      "<prefix/> <kbd>*</kbd>"
+    ]
+  },
+  {
+    "desc": "Create a floating pane with a mouse drag",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "mouse",
+      "drag",
+      "create"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <mouseleft/>"
+    ]
+  },
+  {
+    "desc": "Toggle the current pane between floating and tiled",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "tile",
+      "toggle"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>@</kbd>"
+    ]
+  },
+  {
+    "desc": "Tile a floating pane back into the layout",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "tile",
+      "join-pane"
+    ],
+    "shell": [
+      "tmux join-pane"
+    ],
+    "tmuxcmd": [
+      "join-pane"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Move a floating pane with the mouse",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "mouse",
+      "drag",
+      "move"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Alt</kbd> + <mouseleft/>"
+    ]
+  },
+  {
+    "desc": "Resize a floating pane with the mouse by dragging the border",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "mouse",
+      "drag",
+      "resize"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<mouseleft/>"
+    ]
+  },
+  {
+    "desc": "Snap a floating pane to a corner or edge",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "position",
+      "snap",
+      "corner",
+      "edge"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>g</kbd> <kbd>1</kbd> ... <kbd>4</kbd>",
+      "<prefix/> <kbd>g</kbd> <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd> / <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd> / <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd> / <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Fill the window with a floating pane",
+    "cat": "Panes",
+    "keywords": [
+      "float",
+      "fill",
+      "full",
+      "maximize"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>g</kbd> <kbd>0</kbd>"
+    ]
+  },
+  {
     "desc": "use vi keys in buffer",
     "cat": "Copy Mode",
     "shell": [],
