@@ -557,6 +557,7 @@
   {
     "desc": "Create a floating pane",
     "cat": "Panes",
+    "ver": "3.7+",
     "keywords": [
       "float",
       "overlay",
@@ -575,6 +576,7 @@
   {
     "desc": "Create a floating pane with a mouse drag",
     "cat": "Panes",
+    "ver": "3.8+",
     "keywords": [
       "float",
       "mouse",
@@ -590,6 +592,7 @@
   {
     "desc": "Toggle the current pane between floating and tiled",
     "cat": "Panes",
+    "ver": "3.8+",
     "keywords": [
       "float",
       "tile",
@@ -604,6 +607,7 @@
   {
     "desc": "Tile a floating pane back into the layout",
     "cat": "Panes",
+    "ver": "3.8+",
     "keywords": [
       "float",
       "tile",
@@ -620,6 +624,7 @@
   {
     "desc": "Move a floating pane with the mouse",
     "cat": "Panes",
+    "ver": "3.8+",
     "keywords": [
       "float",
       "mouse",
@@ -635,6 +640,7 @@
   {
     "desc": "Resize a floating pane with the mouse by dragging the border",
     "cat": "Panes",
+    "ver": "3.7+",
     "keywords": [
       "float",
       "mouse",
@@ -650,6 +656,7 @@
   {
     "desc": "Snap a floating pane to a corner or edge",
     "cat": "Panes",
+    "ver": "3.8+",
     "keywords": [
       "float",
       "position",
@@ -667,6 +674,7 @@
   {
     "desc": "Fill the window with a floating pane",
     "cat": "Panes",
+    "ver": "3.8+",
     "keywords": [
       "float",
       "fill",
