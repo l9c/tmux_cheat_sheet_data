@@ -164,11 +164,13 @@
     "shortcut": []
   },
    {
-    "desc": "Session and Window Preview",
+    "desc": "Open an interactive tree view of all available Tmux sessions and windows",
     "cat": "Sessions",
     "keywords": [
       "navigate",
-      "switch"
+      "switch",
+      "list sessions",
+      "list windows"
     ],
     "shell": [],
     "tmuxcmd": [],
@@ -255,11 +257,13 @@
       "list window",
       "show window"
     ],
-    "shell": [],
-    "tmuxcmd": [],
-    "shortcut": [
-      "<prefix/> <kbd>w</kbd>"
-    ]
+    "shell": [
+      "tmux list-windows"
+    ],
+    "tmuxcmd": [
+      "list-windows"
+    ],
+    "shortcut": []
   },
   {
     "desc": "Previous window",
@@ -403,7 +407,7 @@
     "shortcut": []
   },
   {
-    "desc": "Move the current pane left",
+    "desc": "Swap the current pane with the previous pane",
     "cat": "Panes",
     "shell": [],
     "tmuxcmd": [],
@@ -412,7 +416,7 @@
     ]
   },
   {
-    "desc": "Move the current pane right",
+    "desc": "Swap the current pane with the next pane",
     "cat": "Panes",
     "shell": [],
     "tmuxcmd": [],
@@ -438,7 +442,7 @@
     "cat": "Panes",
     "shell": [],
     "tmuxcmd": [
-      "setw synchronize-panes"
+      "set -w synchronize-panes"
     ],
     "shortcut": []
   },
@@ -551,11 +555,158 @@
     ]
   },
   {
-    "desc": "use vi keys in buffer",
+    "desc": "Create a floating pane",
+    "cat": "Panes",
+    "ver": "3.7+",
+    "keywords": [
+      "float",
+      "overlay",
+      "popup"
+    ],
+    "shell": [
+      "tmux new-pane"
+    ],
+    "tmuxcmd": [
+      "new-pane"
+    ],
+    "shortcut": [
+      "<prefix/> <kbd>*</kbd>"
+    ]
+  },
+  {
+    "desc": "Create a floating pane with a mouse drag",
+    "cat": "Panes",
+    "ver": "3.8+",
+    "keywords": [
+      "float",
+      "mouse",
+      "drag",
+      "create"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Ctrl</kbd> + <mouseleft/>"
+    ]
+  },
+  {
+    "desc": "Toggle the current pane between floating and tiled",
+    "cat": "Panes",
+    "ver": "3.8+",
+    "keywords": [
+      "float",
+      "tile",
+      "toggle"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>@</kbd>"
+    ]
+  },
+  {
+    "desc": "Tile a floating pane back into the layout",
+    "cat": "Panes",
+    "ver": "3.8+",
+    "keywords": [
+      "float",
+      "tile",
+      "join-pane"
+    ],
+    "shell": [
+      "tmux join-pane"
+    ],
+    "tmuxcmd": [
+      "join-pane"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Move a floating pane with the mouse",
+    "cat": "Panes",
+    "ver": "3.8+",
+    "keywords": [
+      "float",
+      "mouse",
+      "drag",
+      "move"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<kbd>Alt</kbd> + <mouseleft/>"
+    ]
+  },
+  {
+    "desc": "Resize a floating pane with the mouse by dragging the border",
+    "cat": "Panes",
+    "ver": "3.7+",
+    "keywords": [
+      "float",
+      "mouse",
+      "drag",
+      "resize"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<mouseleft/>"
+    ]
+  },
+  {
+    "desc": "Snap a floating pane to a corner or edge",
+    "cat": "Panes",
+    "ver": "3.8+",
+    "keywords": [
+      "float",
+      "position",
+      "snap",
+      "corner",
+      "edge"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>g</kbd> <kbd>1</kbd> ... <kbd>4</kbd>",
+      "<prefix/> <kbd>g</kbd> <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd> / <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd> / <kbd><i class=\"fa fa-long-arrow-alt-left\"></i></kbd> / <kbd><i class=\"fa fa-long-arrow-alt-right\"></i></kbd>"
+    ]
+  },
+  {
+    "desc": "Fill the window with a floating pane",
+    "cat": "Panes",
+    "ver": "3.8+",
+    "keywords": [
+      "float",
+      "fill",
+      "full",
+      "maximize"
+    ],
+    "shell": [],
+    "tmuxcmd": [],
+    "shortcut": [
+      "<prefix/> <kbd>g</kbd> <kbd>0</kbd>"
+    ]
+  },
+  {
+    "desc": "Use vi keys in copy mode (tmux defaults to emacs)",
     "cat": "Copy Mode",
     "shell": [],
     "tmuxcmd": [
-      "setw -g mode-keys vi"
+      "set -g mode-keys vi"
+    ],
+    "shortcut": []
+  },
+  {
+    "desc": "Reset copy mode keys to the default (emacs)",
+    "cat": "Copy Mode",
+    "keywords": [
+      "reset",
+      "default",
+      "emacs"
+    ],
+    "shell": [],
+    "tmuxcmd": [
+      "set -ug mode-keys"
     ],
     "shortcut": []
   },
@@ -592,7 +743,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>g</kbd>"
+      "<kbd>g</kbd> <small>vi</small>",
+      "<kbd>Alt</kbd> + <kbd>&lt;</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -601,7 +753,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>G</kbd>"
+      "<kbd>G</kbd> <small>vi</small>",
+      "<kbd>Alt</kbd> + <kbd>&gt;</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -610,7 +763,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>"
+      "<kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-up\"></i></kbd>"
     ]
   },
   {
@@ -619,7 +772,7 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>"
+      "<kbd>Ctrl</kbd> + <kbd><i class=\"fa fa-long-arrow-alt-down\"></i></kbd>"
     ]
   },
   {
@@ -628,7 +781,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>h</kbd>"
+      "<kbd>h</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>b</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -637,7 +791,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>j</kbd>"
+      "<kbd>j</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>n</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -646,7 +801,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>k</kbd>"
+      "<kbd>k</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>p</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -655,7 +811,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>l</kbd>"
+      "<kbd>l</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>f</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -664,7 +821,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>w</kbd>"
+      "<kbd>w</kbd> <small>vi</small>",
+      "<kbd>Alt</kbd> + <kbd>f</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -673,7 +831,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>b</kbd>"
+      "<kbd>b</kbd> <small>vi</small>",
+      "<kbd>Alt</kbd> + <kbd>b</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -682,7 +841,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>/</kbd>"
+      "<kbd>/</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>s</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -691,7 +851,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>?</kbd>"
+      "<kbd>?</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>r</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -718,7 +879,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>Spacebar</kbd>"
+      "<kbd>Spacebar</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>Spacebar</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -727,7 +889,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>Esc</kbd>"
+      "<kbd>Esc</kbd> <small>vi</small>",
+      "<kbd>Ctrl</kbd> + <kbd>g</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -736,7 +899,8 @@
     "shell": [],
     "tmuxcmd": [],
     "shortcut": [
-      "<kbd>Enter</kbd>"
+      "<kbd>Enter</kbd> <small>vi</small>",
+      "<kbd>Alt</kbd> + <kbd>w</kbd> <small>emacs</small>"
     ]
   },
   {
@@ -825,7 +989,7 @@
     "cat": "Misc",
     "shell": [],
     "tmuxcmd": [
-      "setw -g OPTION"
+      "set -g -w OPTION"
     ],
     "shortcut": []
   },
@@ -859,14 +1023,5 @@
     "shortcut": [
       "<prefix/> <kbd>?</kbd>"
     ]
-  },
-  {
-    "desc": "Show every session, window, pane, etc...",
-    "cat": "Help",
-    "shell": [
-      "tmux info"
-    ],
-    "tmuxcmd": [],
-    "shortcut": []
   }
 ]
