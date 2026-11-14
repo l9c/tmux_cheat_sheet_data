@@ -59,12 +59,9 @@
   },
   {
     "cat": "Setup and Access",
-    "desc": "Install Claude Code with Homebrew.",
+    "desc": "Install Claude Code with Homebrew on macOS.",
     "command_by_os": {
       "macos": [
-        "brew install --cask claude-code"
-      ],
-      "linux": [
         "brew install --cask claude-code"
       ]
     },
@@ -74,19 +71,15 @@
       "homebrew",
       "brew",
       "macos",
-      "linux",
       "package manager",
       "installation"
     ]
   },
   {
     "cat": "Setup and Access",
-    "desc": "Homebrew installations do not auto-update. Run this command to get the latest features and security fixes.",
+    "desc": "Homebrew installations do not auto-update. Run this to get the latest features and security fixes (use brew upgrade claude-code@latest if you installed that cask).",
     "command_by_os": {
       "macos": [
-        "brew upgrade claude-code"
-      ],
-      "linux": [
         "brew upgrade claude-code"
       ]
     },
@@ -96,7 +89,6 @@
       "homebrew",
       "brew",
       "macos",
-      "linux",
       "package manager"
     ]
   },
@@ -176,20 +168,21 @@
   },
   {
     "cat": "Setup and Access",
-    "desc": "Run initialization hooks and start interactive mode.",
+    "desc": "Run Setup hooks with the init matcher before the session (print mode only).",
     "command": [
-      "claude --init"
+      "claude -p --init \"query\""
     ],
     "keywords": [
       "init",
       "initialization",
-      "hooks",
+      "setup hooks",
+      "print mode",
       "startup"
     ]
   },
   {
     "cat": "Setup and Access",
-    "desc": "Log in to your Claude account from the terminal. Use --email to pre-fill email or --sso to force SSO authentication.",
+    "desc": "Log in to your Claude account from the terminal. Use --email to pre-fill email, --sso to force SSO, or --console to use Console API billing.",
     "command": [
       "claude auth login"
     ],
@@ -205,8 +198,9 @@
   },
   {
     "cat": "Setup and Access",
-    "desc": "Show authentication status as JSON. Use --text for human-readable output. Exits with code 0 if logged in, 1 if not.",
+    "desc": "Show authentication status as JSON, or pass --text for human-readable output. Exits with code 0 if logged in, 1 if not.",
     "command": [
+      "claude auth status",
       "claude auth status --text"
     ],
     "keywords": [
@@ -214,6 +208,7 @@
       "status",
       "account",
       "json",
+      "text output",
       "logged in",
       "check login",
       "authentication status"
@@ -221,31 +216,16 @@
   },
   {
     "cat": "Setup and Access",
-    "desc": "Run a one-time task and get a response without starting an interactive session.",
+    "desc": "Start an interactive session with an initial prompt.",
     "command": [
-      "claude \"write a test for this function\""
+      "claude \"explain this project\""
     ],
     "keywords": [
-      "one-time task",
-      "single task",
-      "run task",
-      "quick task",
-      "task execution"
-    ]
-  },
-  {
-    "cat": "Setup and Access",
-    "desc": "Create a Git commit with Claude Code writing the commit message.",
-    "command": [
-      "claude commit"
-    ],
-    "keywords": [
-      "commit",
-      "git",
-      "git commit",
-      "version control",
-      "staging",
-      "message generation"
+      "initial prompt",
+      "interactive",
+      "start session",
+      "first prompt",
+      "launch"
     ]
   },
   {
@@ -342,6 +322,52 @@
     ]
   },
   {
+    "cat": "Setup and Access",
+    "desc": "Install or reinstall the native Claude Code binary. Pass a version number, stable, or latest.",
+    "command": [
+      "claude install stable"
+    ],
+    "keywords": [
+      "install",
+      "reinstall",
+      "native binary",
+      "stable",
+      "latest",
+      "version",
+      "setup"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Run read-only installation and settings diagnostics without starting a session.",
+    "command": [
+      "claude doctor"
+    ],
+    "keywords": [
+      "doctor",
+      "diagnostics",
+      "health check",
+      "troubleshoot",
+      "installation",
+      "settings"
+    ]
+  },
+  {
+    "cat": "Setup and Access",
+    "desc": "Generate a long-lived OAuth token for CI and scripts. Requires a Claude subscription.",
+    "command": [
+      "claude setup-token"
+    ],
+    "keywords": [
+      "token",
+      "oauth",
+      "ci",
+      "scripts",
+      "automation",
+      "authentication"
+    ]
+  },
+  {
     "cat": "Prompting and Input",
     "desc": "Run Claude once in print mode and exit with a single response.",
     "command": [
@@ -404,16 +430,17 @@
   },
   {
     "cat": "Prompting and Input",
-    "desc": "Delete the entire current line.",
+    "desc": "Delete from the cursor back to the start of the current line. Press again to clear across lines in multiline input.",
     "shortcut": [
       "<kbd>Ctrl</kbd> + <kbd>U</kbd>"
     ],
     "keywords": [
+      "delete to line start",
       "delete line",
       "editing",
       "erase line",
       "clear input",
-      "kill entire line",
+      "kill line",
       "remove line"
     ]
   },
@@ -481,9 +508,9 @@
     "cat": "Prompting and Input",
     "desc": "Paste an image from the clipboard.",
     "shortcut_by_os": {
-      "macos": "<kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>Cmd</kbd> + <kbd>V</kbd>",
+      "macos": "<kbd>Ctrl</kbd> + <kbd>V</kbd> (or <kbd>Cmd</kbd> + <kbd>V</kbd> in iTerm2)",
       "windows": "<kbd>Alt</kbd> + <kbd>V</kbd>",
-      "linux": "<kbd>Ctrl</kbd> + <kbd>V</kbd> or <kbd>Alt</kbd> + <kbd>V</kbd>"
+      "linux": "<kbd>Ctrl</kbd> + <kbd>V</kbd> (or <kbd>Alt</kbd> + <kbd>V</kbd> on WSL)"
     },
     "keywords": [
       "paste image",
@@ -496,7 +523,7 @@
   },
   {
     "cat": "Prompting and Input",
-    "desc": "Insert a newline for multiline input.",
+    "desc": "Insert a newline for multiline input. Shift+Enter needs a supported terminal (run /terminal-setup); on macOS, enable Option as Meta for Option+Enter.",
     "shortcut": [
       "<kbd>\\</kbd> + <kbd>Enter</kbd>",
       "<kbd>Shift</kbd> + <kbd>Enter</kbd>",
@@ -576,15 +603,15 @@
   },
   {
     "cat": "Prompting and Input",
-    "desc": "Accept a prompt suggestion and submit it immediately.",
+    "desc": "Submit the prompt suggestion already placed in the input with Tab or the right arrow.",
     "shortcut": [
       "<kbd>Enter</kbd>"
     ],
     "keywords": [
       "prompt suggestions",
-      "accept suggestion",
+      "submit suggestion",
       "submit",
-      "accept and submit",
+      "send suggestion",
       "execute suggestion"
     ]
   },
@@ -606,7 +633,7 @@
   },
   {
     "cat": "Prompting and Input",
-    "desc": "Toggle push-to-talk voice dictation.",
+    "desc": "Toggle voice dictation (hold or tap mode).",
     "slash": [
       "/voice"
     ],
@@ -812,9 +839,9 @@
   },
   {
     "cat": "Prompting and Input",
-    "desc": "Enable automatic fallback to a specified model when the default model is overloaded (print mode only).",
+    "desc": "Enable automatic fallback to the specified model(s) when the primary model is overloaded or unavailable. Accepts a comma-separated list tried in order.",
     "command": [
-      "claude -p --fallback-model sonnet \"query\""
+      "claude --fallback-model sonnet,haiku \"query\""
     ],
     "keywords": [
       "fallback model",
@@ -906,17 +933,17 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Resume another conversation from inside the current session.",
+    "desc": "Resume a conversation by ID or name, or open the session picker; background sessions appear marked with bg.",
     "slash": [
-      "/resume",
-      "/continue"
+      "/resume"
     ],
     "keywords": [
       "resume",
       "session management",
-      "alternate session",
+      "session picker",
       "switch session",
-      "load conversation"
+      "load conversation",
+      "background session"
     ]
   },
   {
@@ -978,15 +1005,17 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Open the task list for the current session.",
+    "desc": "View and manage background work in the current session, including running shells and finished subagents. This is the background-task view, not Claude's to-do checklist.",
     "slash": [
       "/tasks"
     ],
     "keywords": [
       "tasks",
-      "task list",
-      "status",
-      "todo",
+      "background tasks",
+      "background work",
+      "bashes",
+      "running shells",
+      "subagents",
       "progress",
       "tracking"
     ]
@@ -1006,7 +1035,7 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Export the current response to a file.",
+    "desc": "Export the current conversation as plain text, optionally to a file.",
     "slash": [
       "/export notes.txt"
     ],
@@ -1020,7 +1049,7 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Transfer a terminal session to the desktop app or web for visual diff review and continued work.",
+    "desc": "Continue the current session in the Claude Code Desktop app (macOS or x64 Windows).",
     "platforms": [
       "macos",
       "windows"
@@ -1032,7 +1061,7 @@
     "keywords": [
       "desktop",
       "desktop app",
-      "visual diff",
+      "continue on desktop",
       "transfer session",
       "move to desktop",
       "routing"
@@ -1056,8 +1085,7 @@
     "cat": "Sessions and Context",
     "desc": "Create a branch of the current conversation at this point.",
     "slash": [
-      "/branch feature-auth",
-      "/fork"
+      "/branch feature-auth"
     ],
     "keywords": [
       "branch",
@@ -1085,13 +1113,14 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Rewind or summarize from the keyboard.",
+    "desc": "Clear the input draft when text is present (press Up to recall it); on an empty prompt, open the rewind menu to restore or summarize code and conversation.",
     "shortcut": [
       "<kbd>Esc</kbd> + <kbd>Esc</kbd>"
     ],
     "keywords": [
       "rewind",
       "summarize",
+      "clear draft",
       "checkpoint",
       "go back",
       "restore conversation",
@@ -1232,7 +1261,7 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Resume sessions linked to a specific GitHub PR (auto-linked when created via gh pr create).",
+    "desc": "Open the session picker filtered to sessions linked to a pull request; accepts a PR number or GitHub/GitLab/Bitbucket URL. Sessions link automatically when Claude creates the PR.",
     "command": [
       "claude --from-pr 123"
     ],
@@ -1240,6 +1269,8 @@
       "from pr",
       "pull request",
       "github",
+      "gitlab",
+      "bitbucket",
       "pr session",
       "resume pr"
     ]
@@ -1260,23 +1291,25 @@
   },
   {
     "cat": "Sessions and Context",
-    "desc": "Create a new web session on claude.ai with the provided task description.",
+    "desc": "Create a new cloud session on claude.ai with the provided task description. The --remote alias is deprecated.",
     "command": [
-      "claude --remote \"Fix the login bug\""
+      "claude --cloud \"Fix the login bug\""
     ],
     "keywords": [
-      "remote",
+      "cloud",
       "cloud session",
       "claude.ai",
       "web task",
-      "offload work"
+      "offload work",
+      "remote"
     ]
   },
   {
     "cat": "Sessions and Context",
     "desc": "Start an interactive session with Remote Control enabled so you can also control it from claude.ai or the Claude app.",
     "command": [
-      "claude --remote-control \"My Project\""
+      "claude --remote-control \"My Project\"",
+      "claude --rc \"My Project\""
     ],
     "keywords": [
       "remote control",
@@ -1284,6 +1317,70 @@
       "claude app",
       "control remotely",
       "mobile control"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Start the session as a background agent and return immediately. Combine with --exec to run a shell command as a background job.",
+    "command": [
+      "claude --bg \"investigate the flaky test\"",
+      "claude --bg --exec 'pytest -x'"
+    ],
+    "keywords": [
+      "background agent",
+      "bg",
+      "background job",
+      "detach",
+      "async",
+      "exec"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Open agent view to monitor and dispatch parallel background sessions.",
+    "command": [
+      "claude agents"
+    ],
+    "keywords": [
+      "agent view",
+      "background sessions",
+      "monitor",
+      "dispatch",
+      "parallel"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Print recent output from a background session, or attach to it in this terminal.",
+    "command": [
+      "claude logs 7c5dcf5d",
+      "claude attach 7c5dcf5d"
+    ],
+    "keywords": [
+      "background session",
+      "logs",
+      "attach",
+      "output",
+      "shell",
+      "session id"
+    ]
+  },
+  {
+    "cat": "Sessions and Context",
+    "desc": "Stop, restart, or remove a background session from the shell.",
+    "command": [
+      "claude stop 7c5dcf5d",
+      "claude respawn 7c5dcf5d",
+      "claude rm 7c5dcf5d"
+    ],
+    "keywords": [
+      "background session",
+      "stop",
+      "restart",
+      "respawn",
+      "remove",
+      "rm",
+      "session management"
     ]
   },
   {
@@ -1302,16 +1399,17 @@
   },
   {
     "cat": "Navigation and Control",
-    "desc": "Kill all background agents.",
+    "desc": "Stop all running background subagents in this session (press twice within 3 seconds to confirm).",
     "shortcut": [
-      "<kbd>Ctrl</kbd> + <kbd>F</kbd>"
+      "<kbd>Ctrl</kbd> + <kbd>X</kbd> then <kbd>Ctrl</kbd> + <kbd>K</kbd>"
     ],
     "keywords": [
       "kill background agents",
       "session control",
       "stop agents",
       "terminate",
-      "force kill"
+      "force kill",
+      "subagents"
     ]
   },
   {
@@ -1345,12 +1443,12 @@
   },
   {
     "cat": "Navigation and Control",
-    "desc": "Clear the terminal screen while keeping conversation history.",
+    "desc": "Redraw the terminal screen, keeping input and conversation history.",
     "shortcut": [
       "<kbd>Ctrl</kbd> + <kbd>L</kbd>"
     ],
     "keywords": [
-      "clear screen",
+      "redraw screen",
       "display",
       "scrollback",
       "reset screen",
@@ -1359,17 +1457,16 @@
   },
   {
     "cat": "Navigation and Control",
-    "desc": "Toggle verbose output for tool execution details.",
+    "desc": "Toggle the transcript viewer to inspect detailed tool usage and execution.",
     "shortcut": [
       "<kbd>Ctrl</kbd> + <kbd>O</kbd>"
     ],
     "keywords": [
+      "transcript viewer",
       "verbose output",
       "display",
       "tool usage",
-      "debug info",
-      "detailed output",
-      "verbose mode"
+      "detailed output"
     ]
   },
   {
@@ -1462,7 +1559,7 @@
   },
   {
     "cat": "Review and Diagnostics",
-    "desc": "Rewind the conversation to an earlier checkpoint.",
+    "desc": "Rewind the conversation and/or code to an earlier checkpoint, or summarize from a selected message.",
     "slash": [
       "/rewind",
       "/checkpoint",
@@ -1509,7 +1606,7 @@
   },
   {
     "cat": "Review and Diagnostics",
-    "desc": "Show detailed conversation and usage statistics including session history and streaks.",
+    "desc": "Alias for /usage that opens the Stats tab, showing session cost, plan usage limits, and activity stats.",
     "slash": [
       "/stats"
     ],
@@ -1517,8 +1614,9 @@
       "stats",
       "statistics",
       "usage",
-      "session history",
       "analytics",
+      "plan limits",
+      "activity stats",
       "daily usage"
     ]
   },
@@ -1663,6 +1761,20 @@
     ]
   },
   {
+    "cat": "Review and Diagnostics",
+    "desc": "Run a cloud-hosted multi-agent code review non-interactively and print the findings.",
+    "command": [
+      "claude ultrareview 1234 --json"
+    ],
+    "keywords": [
+      "ultrareview",
+      "code review",
+      "multi-agent",
+      "cloud review",
+      "findings"
+    ]
+  },
+  {
     "cat": "Reverse Search",
     "desc": "Start reverse search through command history or cycle through older matches.",
     "shortcut": [
@@ -1765,13 +1877,13 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Set the interface color theme.",
+    "desc": "Set the prompt bar color for the current session.",
     "slash": [
       "/color orange"
     ],
     "keywords": [
       "color",
-      "theme",
+      "prompt bar",
       "appearance",
       "customize colors",
       "ui colors"
@@ -1869,7 +1981,7 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Open sandbox settings.",
+    "desc": "Toggle sandbox mode. Available on supported platforms only.",
     "slash": [
       "/sandbox"
     ],
@@ -1926,7 +2038,7 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Connect Claude Code to your IDE.",
+    "desc": "Manage IDE integrations and show connection status.",
     "slash": [
       "/ide"
     ],
@@ -1940,7 +2052,7 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Open agent and teammate options.",
+    "desc": "Print a reminder to ask Claude to create or manage subagents, or to edit .claude/agents/ or ~/.claude/agents/ directly.",
     "slash": [
       "/agents"
     ],
@@ -2000,10 +2112,11 @@
   {
     "cat": "Configuration and Integrations",
     "desc": "Toggle permission modes.",
-    "shortcut": [
-      "<kbd>Shift</kbd> + <kbd>Tab</kbd>",
-      "<kbd>Alt</kbd> + <kbd>M</kbd>"
-    ],
+    "shortcut_by_os": {
+      "macos": "<kbd>Shift</kbd> + <kbd>Tab</kbd>",
+      "windows": "<kbd>Shift</kbd> + <kbd>Tab</kbd> or <kbd>Alt</kbd> + <kbd>M</kbd> (when VT input mode is unavailable)",
+      "linux": "<kbd>Shift</kbd> + <kbd>Tab</kbd>"
+    },
     "keywords": [
       "permission mode",
       "auto accept",
@@ -2105,7 +2218,7 @@
   },
   {
     "cat": "Help and Discovery",
-    "desc": "Submit feedback or report bugs about Claude Code.",
+    "desc": "Submit feedback or report bugs. /bug (alias /share) opens the same dialog as /feedback.",
     "slash": [
       "/feedback",
       "/bug"
@@ -2120,7 +2233,7 @@
   },
   {
     "cat": "Help and Discovery",
-    "desc": "Open the shortcut legend for your current environment.",
+    "desc": "Toggle the keyboard shortcut help panel when the prompt is empty.",
     "shortcut": [
       "<kbd>?</kbd>"
     ],
@@ -2239,7 +2352,7 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Define custom subagents dynamically at launch via JSON, using the same fields as subagent frontmatter plus a prompt field.",
+    "desc": "Define custom subagents dynamically at launch via JSON; with --print, also accepts the path to a JSON file.",
     "command": [
       "claude --agents '{\"reviewer\":{\"description\":\"Reviews code\",\"prompt\":\"You are a code reviewer\"}}'"
     ],
@@ -2253,7 +2366,7 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Restrict which built-in tools Claude can use. Use \"\" to disable all, \"default\" for all, or list tool names.",
+    "desc": "Restrict which built-in tools Claude can use. Use \"\" to disable all, \"default\" for the default set, or list tool names.",
     "command": [
       "claude --tools \"Bash,Edit,Read\""
     ],
@@ -2267,7 +2380,7 @@
   },
   {
     "cat": "Configuration and Integrations",
-    "desc": "Set the effort level for the session at launch: low, medium, high, or max (Opus only, session-scoped).",
+    "desc": "Set the effort level for the session at launch: low, medium, high, xhigh, max, or ultracode (model-dependent).",
     "command": [
       "claude --effort high"
     ],
@@ -2276,7 +2389,8 @@
       "reasoning depth",
       "thinking level",
       "launch flag",
-      "quality"
+      "quality",
+      "ultracode"
     ]
   },
   {
@@ -2320,6 +2434,93 @@
       "strict mcp",
       "load mcp",
       "json config"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Start with all customizations disabled to troubleshoot a broken configuration.",
+    "command": [
+      "claude --safe-mode"
+    ],
+    "keywords": [
+      "safe mode",
+      "troubleshoot",
+      "broken config",
+      "disable customizations",
+      "diagnostics"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Start in minimal mode for scripts: skip hooks, skills, plugins, MCP servers, and CLAUDE.md discovery.",
+    "command": [
+      "claude --bare -p \"query\""
+    ],
+    "keywords": [
+      "bare mode",
+      "minimal",
+      "scripts",
+      "fast startup",
+      "skip config",
+      "headless"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Enable or disable the Chrome browser integration for web automation and testing.",
+    "command": [
+      "claude --chrome",
+      "claude --no-chrome"
+    ],
+    "keywords": [
+      "chrome",
+      "browser",
+      "web automation",
+      "testing",
+      "integration",
+      "disable chrome"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Load settings from a JSON file or an inline JSON string for this session.",
+    "command": [
+      "claude --settings ./settings.json"
+    ],
+    "keywords": [
+      "settings",
+      "json",
+      "override",
+      "config",
+      "session settings"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Load a plugin from a directory or .zip archive for this session only.",
+    "command": [
+      "claude --plugin-dir ./my-plugin"
+    ],
+    "keywords": [
+      "plugin",
+      "load plugin",
+      "local plugin",
+      "session",
+      "extension"
+    ]
+  },
+  {
+    "cat": "Configuration and Integrations",
+    "desc": "Get validated JSON output matching a JSON Schema after the agent completes its workflow (print mode only).",
+    "command": [
+      "claude -p --json-schema '{\"type\":\"object\",\"properties\":{...}}' \"query\""
+    ],
+    "keywords": [
+      "json schema",
+      "structured output",
+      "validation",
+      "print mode",
+      "automation"
     ]
   }
 ]
